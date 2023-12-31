@@ -1,0 +1,75 @@
+.top_gallery_section
+	display: flex
+	align-items: flex-start
+	justify-content: space-between
+	margin-bottom: 50px !important
+	.left_content
+		width: calc( 33.33333% - 40px )
+		.gallery_meta
+			font-size: 18px
+			line-height: 38px
+			color: $pink-dark
+			span.meta_item
+				font-weight: 700
+				display: block
+				& > span
+					font-weight: 900
+					color: $blue-dark
+			a
+				color: inherit
+				text-decoration: underline
+				transition: $trs
+				&:hover
+					color: $blue
+	.alekids_gallery_slider
+		width: calc( 66.66666% - 10px )
+		margin-top: 25px
+		img
+			display: inline-block
+			border-radius: 30px
+		ul
+			li::before
+				display: none
+	h4
+		font-size: 30px
+		line-height: 36px
+		font-weight: 900
+		padding-top: 27px
+		position: relative
+		margin-bottom: 40px
+		&::before
+			content: ''
+			width: 100px
+			height: 5px
+			border-radius: 10px
+			background-color: $pink_light
+			position: absolute
+			left: 0
+			top: 0
+			display: block
+.bottom_gallery_section
+	blockquote
+		padding-left: 120px
+		position: relative
+		min-height: 90px
+		margin-bottom: 2.2em
+		color: $blue-dark
+		font-weight: 700
+		margin-left: 30px
+		margin-right: 100px
+		cite
+			display: block
+			color: #7d7d7d
+			font-weight: 400
+			font-size: 18px
+			font-style: normal
+			margin-top: 5px
+		&::after
+			content: ''
+			width: 90px
+			height: 90px
+			display: block
+			background: url('../svg/cite.svg') center center no-repeat
+			position: absolute
+			top: 0
+			left: 0

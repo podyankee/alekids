@@ -1,0 +1,11 @@
+<?php
+ale_demo_media::add_image_to_media_gallery('ale_p1',"http://alethemes.com/olins_base/media/cosushi/p1.jpg");
+ale_demo_media::add_image_to_media_gallery('ale_p2',"http://alethemes.com/olins_base/media/cosushi/p2.jpg");
+ale_demo_media::add_image_to_media_gallery('ale_p3',"http://alethemes.com/olins_base/media/cosushi/p3.jpg");
+ale_demo_media::add_image_to_media_gallery('ale_p4',"http://alethemes.com/olins_base/media/cosushi/p4.jpg");
+ale_demo_media::add_image_to_media_gallery('ale_p5',"http://alethemes.com/olins_base/media/cosushi/p5.jpg");
+ale_demo_media::add_image_to_media_gallery('ale_p6',"http://alethemes.com/olins_base/media/cosushi/p6.jpg");
+ale_demo_media::add_image_to_media_gallery('ale_p7',"http://alethemes.com/olins_base/media/cosushi/p7.jpg");
+ale_demo_media::add_image_to_media_gallery('ale_p8',"http://alethemes.com/olins_base/media/cosushi/p8.jpg");
+ale_demo_media::add_image_to_media_gallery('ale_p9',"http://alethemes.com/olins_base/media/cosushi/p9.jpg");
+ale_demo_media::add_image_to_media_gallery('ale_p10',"http://alethemes.com/olins_base/media/cosushi/p10.jpg");

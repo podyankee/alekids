@@ -1,0 +1,26 @@
+{
+  "name": "fictional-university-theme",
+  "version": "1.0.0",
+  "description": "/****************************************************************** SHORT INFORMATION ******************************************************************/ Ale Theme is compatible with popular plugins, as: WPML and qTranslate – for building multilingual portal, SEO plugins – for better search engine indexing.",
+  "main": "index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start:hot": "wp-scripts start --hot --webpack-src-dir=assets --output-path=assets/dist",
+    "start": "wp-scripts start --webpack-src-dir=assets --output-path=assets/dist",
+    "dev": "wp-scripts start --webpack-src-dir=assets --output-path=assets/dist",
+    "devFast": "wp-scripts start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@glidejs/glide": "^3.4.1",
+    "@wordpress/scripts": "*",
+    "axios": "^0.21.1",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.53.0"
+  }
+}

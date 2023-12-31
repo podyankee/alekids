@@ -1,0 +1,292 @@
+header.top
+	.wrapper
+		display: flex
+		align-items: center
+		justify-content: space-between
+		height: 110px
+nav ul.menu-header
+		font-size: 0
+		font-weight: 700
+		line-height: 20px
+		text-transform: uppercase
+		color: $blue-dark
+		display: inline
+		> li
+			display: inline-block
+			font-size: 15px
+			margin-left: 10px
+			margin-right: 10px
+			position: relative
+			padding-bottom: 10px
+			ul.sub-menu
+				display: none
+				background-color: $blue
+				padding: 20px 15px
+				border-radius: 30px
+				width: 200px
+				box-sizing: border-box
+				position: relative
+				top: 100%
+				left: 50%
+				transform: translateX(-50%)
+				position: absolute
+				line-height: 30px
+				text-align: center
+				z-index: 9
+				li
+					padding: 20px
+				ul.sub-menu
+					display: none
+					background-color: #ffbebe
+					left: 140%
+					margin-left: 0
+					top: -3px
+				li:hover
+					ul.sub-menu
+						display: block
+						a
+							&::before
+								background-color: transparent
+				a
+					&:hover
+						color: #fff
+			&:nth-child(2n+2)
+				ul.sub-menu
+					background-color: $green
+				a
+					&::before
+						background-color: $green
+			&:nth-child(3n+3)
+				ul.sub-menu
+					background-color: $pink-light
+				a
+					&::before
+						background-color: $pink-light
+			&:nth-child(4n+4)
+				ul.sub-menu
+					background-color: $yellow-light
+				a
+					&::before
+						background-color: $yellow-light
+			&:hover
+				ul.sub-menu
+					display: block
+				a
+					&::before
+						width: calc(100% + 10px)
+						transition: $trs
+			&.current-menu-item
+				a
+					&::before
+						width: calc(100% + 10px)
+			a
+				color: inherit
+			> a
+				color: inherit
+				position: relative
+				&::before
+					content: ''
+					width: 0
+					height: 10px
+					border-radius: 10px
+					display: block
+					position: absolute
+					top: 100%
+					left: -5px
+					margin-top: -10px
+					background-color: $blue
+					z-index: -1
+					transition: all 900ms ease-in-out
+
+.right_info
+	display: flex
+	align-items: center
+	justify-content: right
+	.search_opener
+		margin-left: 10px
+
+.ale_cart_icon, .ale_search_icon
+	width: 40px
+	height: 40px
+	position: relative
+	.mask
+		width: 36px
+		height: 36px
+		border: 2px dashed $pink-light
+		background: transparent
+		border-radius: 100%
+		position: absolute
+		top: 0
+		left: 0
+	&:hover
+		.mask
+			animation: rotate_circle 20s linear infinite both
+		.icon::after
+			bottom: 9px
+			transition: $trs
+			transform: scale(1)
+	.icon
+		width: 30px
+		height: 30px
+		border-radius: 100%
+		background: $pink-light
+		background-repeat: no-repeat
+		position: absolute
+		top: 5px
+		left: 5px
+		&::after
+			content: ''
+			width: 30px
+			height: 30px
+			background: url(../svg/cart.svg) center no-repeat
+			transform: scale(0.6)
+			bottom: 0
+			display: block
+			position: absolute
+			left: 0
+			transition: $trs
+
+.ale_search_icon
+	.mask
+		border-color: $blue
+	.icon
+		background: $blue
+		&::after
+			background: url(../svg/search.svg) center no-repeat
+
+.close_info
+	margin-bottom: 100px
+	display: block
+	color: $blue-dark
+	font-weight: 900
+	font-size: 50px
+	position: relative
+	&::before
+		content: ''
+		width: calc( 100% + 20px )
+		height: 20px
+		border-radius: 20px
+		display: block
+		position: absolute
+		top: 100%
+		left: -5px
+		margin-top: -10px
+		background-color: $blue
+		z-index: -1
+		transition: all 900ms ease-in-out
+
+@keyframes rotate_circle
+	100%
+		transform: rotateZ(360deg)
+
+.alekids_search_modal
+	display: none
+	position: fixed
+	background-color: #fffbf4
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 99999
+	form
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		padding-top: 50px
+
+	input[type="text"]
+		border: 0
+		background-color: #fff
+		width: 400px
+		height: 70px
+		padding: 0 30px
+		line-height: 70px
+		font-size: 26px
+		font-weight: 900
+		color: #7d7d7d
+		text-align: center
+		margin-bottom: 30px
+		+placeholder
+			color: #dfdfdf
+			font-weight: 400
+			font-size: 20px
+
+	input[type="submit"]
+		background-color: transparent
+		border: 0
+		margin: 0
+		padding: 0
+		text-transform: none
+		font-size: 26px
+		font-weight: 900
+		color: $pink-dark
+.colored_line
+	display: flex
+	align-items: center
+	justify-content: stretch
+	margin-bottom: 6px
+	&.gallery_single_bottom
+		max-width: 370px
+		margin-left: -5px
+		margin-bottom: 100px
+	div
+		height: 5px
+		width: 100%
+		border-radius: 15px
+		margin-left: 5px
+		margin-right: 5px
+		background-color: $pink-light
+		&:nth-child(2n)
+			background-color: $blue
+		&:nth-child(3n)
+			background-color: $yellow-light
+		&:nth-child(4n)
+			background-color: $green
+.inner_header
+	background: url('../svg/header.svg') top left repeat-x
+	min-height: 220px
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: flex-end
+	position: relative
+	margin-bottom: 100px
+	.custom_icon_for_heading
+		position: absolute
+		right: 10px
+		top: 50%
+	h1
+		font-style: normal
+		font-weight: 900
+		font-size: 50px
+		line-height: 60px
+		position: relative
+		&::before
+			content: ''
+			width: calc( 100% + 20px )
+			height: 20px
+			border-radius: 20px
+			display: block
+			position: absolute
+			top: 100%
+			left: -10px
+			margin-top: -25px
+			background-color: $pink-light
+			z-index: -1
+	.breadcrumbs
+		margin-top: 7px
+		font-weight: 700
+		font-style: normal
+		font-size: 16px
+		line-height: 24px
+		color: #c4c4c4
+		.separator
+			display: inline-block
+			margin-left: 9px
+			margin-right: 9px
+			color: $blue
+		a
+			color: $pink-dark
+			&:hover
+				color: $blue
