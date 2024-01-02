@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="alekids_single_gallery">
+<div class="wrapper alekids_single_gallery">
 
 
 

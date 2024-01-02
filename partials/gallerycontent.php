@@ -1,6 +1,6 @@
 <?php $alekids_images = get_post_meta($post->ID, 'ale_gallery_id', true); ?>
 
-<div class="wrapper top_gallery_section">
+<div class="top_gallery_section">
 	<div class="left_content">
 		<h4><?php the_title(); ?></h4>
 		<div class="gallery_meta font_one">
@@ -65,7 +65,7 @@
 		?>
 	</div>
 </div>
-<div class="wrapper bottom_gallery_section">
+<div class="bottom_gallery_section">
 	<?php the_content(); ?>
 	<div class="colored_line gallery_single_bottom">
 		<div></div>
