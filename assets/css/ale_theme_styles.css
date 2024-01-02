@@ -2926,6 +2926,10 @@ nav ul.menu-header > li > a::before {
   left: 0;
 }
 
+.alekids_single_gallery .comments {
+  margin-bottom: 100px;
+}
+
 footer.site_footer {
   color: #fff;
   background-color: #304566;
