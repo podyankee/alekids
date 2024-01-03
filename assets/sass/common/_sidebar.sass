@@ -1,0 +1,173 @@
+aside.sidebar
+	img
+		max-width: 100%
+		height: auto
+	table
+		margin-bottom: 30px
+		border-collapse: collapse
+		caption
+			background-color: $blue
+			color: #fff
+			font-weight: 700
+			padding: 7px 0
+		a
+			text-decoration: underline !important
+			&:hover
+				-moz-opacity: 0.6
+				-khtml-opacity: 0.6
+				-webkit-opacity: 0.6
+				opacity: 0.6
+				text-decoration: none !important
+		th
+			color: $blue-dark
+			background-color: $blue-dark
+			border: 1px solid $blue-dark!important
+			text-align: center
+			color: #fff
+		a
+			text-decoration: underline !important#000
+		td, th
+			padding: 8px 5px
+			border: 1px solid #fefbf4
+			text-align: center
+			font-weight: 700
+	select
+		max-width: 100%
+		border: 2px dashed $pink-light
+		padding: 10px 20px
+		box-sizing: border-box
+		font-size: 18px
+		border-radius: 30px
+		font-weight: 700
+		color: $blue-dark
+		appearance: none
+		background-color: transparent
+		background-image: url('../svg/select.svg')
+		background-repeat: no-repeat
+		background-position-y: center
+		background-position-x: 90%
+	.tagcloud
+		font-size: 0
+		a
+			background-color: $blue
+			border-radius: 30px
+			height: 40px
+			display: inline-block
+			padding: 0 25px
+			font-weight: 900
+			font-size: 16px!important
+			line-height: 40px
+			color: #fff
+			margin-right: 10px
+			transition: $trs
+			margin-bottom: 10px
+			&:hover
+				background-color: $pink-dark
+	ol
+		margin-left: 30px
+		font-weight: 700
+		color: $blue-dark
+		list-style: decimal
+		a
+			color: $pink-dark
+			&:hover
+				color: $blue
+		li
+			list-style: decimal
+		ol
+			list-style: upper-alpha
+		ol
+			list-style: lower-roman
+			ol
+				list-style: lower-alpha
+.widget_categories ul, .widget_archive ul, .widget_pages ul, .widget_meta ul
+	font-size: 20px
+	line-height: 40px
+	font-weight: 700
+	color: $blue-dark
+.widget_recent_comments ul, .widget_rss ul
+	font-weight: 400
+	color: inherit
+	a
+		color: $pink-dark
+		&:hover
+			color: $blue
+.widget
+	margin-bottom: 40px
+	h1, h2, h3, h4, h5, h6
+		font-weight: 900
+		position: relative
+		padding-top: 27px
+		margin-bottom: 25px
+		&::before
+			width: 100px
+			height: 5px
+			background-color: $pink-light
+			border-radius: 10px
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+	a
+		color: inherit
+		&:hover
+			color: $pink-dark
+	ul
+		list-style: none
+		margin-bottom: 40px
+		&.wp-block-categories, &.wp-block-archives
+			color: $blue-dark
+			font-size: 20px
+			line-height: 40px
+			font-weight: 700
+		li
+			padding-left: 8px
+		li:before
+			content: ''
+			background-size: contain
+			display: inline-block
+			width: 20px
+			height: 20px
+			position: relative
+			top: 0.1rem
+			margin-right: 15px
+		li:nth-child(odd)
+			&::before
+				background-image: url('../svg/liodd.svg')
+		li:nth-child(even)
+			&::before
+				background-image: url('../svg/lieven.svg')
+	.ale_item_blog
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+		margin-bottom: 20px
+		img
+			max-width: 80px
+			height: auto
+			border-radius: 10px
+			margin-right: 15px
+	h4.entry-title
+		font-weight: 900
+		font-size: 22px
+		line-height: 26px
+		&::before
+			display: none
+h5.widget_title
+	font-weight: 900
+	font-size: 30px
+	line-height: 36px
+	position: relative
+	padding-top: 27px
+	margin-bottom: 25px
+	&::before
+		width: 100px
+		height: 5px
+		background-color: $pink-light
+		border-radius: 10px
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		left: 0

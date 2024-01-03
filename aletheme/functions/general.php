@@ -896,7 +896,7 @@ function ale_custom_sidebar_widgets_init() {
     register_sidebar(array(
         'name' => 'Main Sidebar',
         'id' => 'main-sidebar',
-        'description' => 'Appears as the left (or right) sidebar on blog post in case you selected "show sidebar" in meta data for specific post or theme options panel.',
+        'description' => 'Appears as the  right sidebar on single blog post in case you selected "show sidebar" in meta data for specific post or theme options panel.',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h5 class="widget_title">',

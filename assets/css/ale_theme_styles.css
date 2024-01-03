@@ -224,15 +224,18 @@ a img.aligncenter {
 }
 
 .wp-caption {
-  background: #f0f0f0;
+  background: #fefbf4;
   width: auto;
   max-width: 99%;
   padding: 0;
   text-align: center;
   display: block;
+  background-color: transparent;
+  margin-bottom: 20px;
 }
 .wp-caption.alignnone {
   margin: 0;
+  margin-bottom: 20px;
 }
 .wp-caption.alignleft {
   margin: 5px 20px 20px 0;
@@ -646,6 +649,14 @@ hr {
   background-color: #fdfbfb;
   letter-spacing: 0.05em;
 }
+.story table a {
+  -webkit-text-decoration: underline !important #000;
+          text-decoration: underline !important #000;
+}
+.story table td, .story table th {
+  padding: 10px 15px;
+  border: 1px solid #f2f2d2;
+}
 .story .tagsphar {
   clear: both;
 }
@@ -959,6 +970,12 @@ blockquote::after {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+ul .sub-menu {
+  margin-left: 10px;
+  font-weight: 700;
+  color: #304566;
 }
 
 .alekids_button {
@@ -3425,4 +3442,230 @@ footer.site_footer .contact_box .alekids_email a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+aside.sidebar img {
+  max-width: 100%;
+  height: auto;
+}
+aside.sidebar table {
+  margin-bottom: 30px;
+  border-collapse: collapse;
+}
+aside.sidebar table caption {
+  background-color: #b3d0fd;
+  color: #fff;
+  font-weight: 700;
+  padding: 7px 0;
+}
+aside.sidebar table a {
+  text-decoration: underline !important;
+}
+aside.sidebar table a:hover {
+  -moz-opacity: 0.6;
+  -khtml-opacity: 0.6;
+  -webkit-opacity: 0.6;
+  opacity: 0.6;
+  text-decoration: none !important;
+}
+aside.sidebar table th {
+  color: #304566;
+  background-color: #304566;
+  border: 1px solid #304566 !important;
+  text-align: center;
+  color: #fff;
+}
+aside.sidebar table a {
+  -webkit-text-decoration: underline !important #000;
+          text-decoration: underline !important #000;
+}
+aside.sidebar table td, aside.sidebar table th {
+  padding: 8px 5px;
+  border: 1px solid #fefbf4;
+  text-align: center;
+  font-weight: 700;
+}
+aside.sidebar select {
+  max-width: 100%;
+  border: 2px dashed #ffd3bd;
+  padding: 10px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 18px;
+  border-radius: 30px;
+  font-weight: 700;
+  color: #304566;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  background-image: url("../svg/select.svg");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 90%;
+}
+aside.sidebar .tagcloud {
+  font-size: 0;
+}
+aside.sidebar .tagcloud a {
+  background-color: #b3d0fd;
+  border-radius: 30px;
+  height: 40px;
+  display: inline-block;
+  padding: 0 25px;
+  font-weight: 900;
+  font-size: 16px !important;
+  line-height: 40px;
+  color: #fff;
+  margin-right: 10px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 10px;
+}
+aside.sidebar .tagcloud a:hover {
+  background-color: #ffa1ac;
+}
+aside.sidebar ol {
+  margin-left: 30px;
+  font-weight: 700;
+  color: #304566;
+  list-style: decimal;
+}
+aside.sidebar ol a {
+  color: #ffa1ac;
+}
+aside.sidebar ol a:hover {
+  color: #b3d0fd;
+}
+aside.sidebar ol li {
+  list-style: decimal;
+}
+aside.sidebar ol ol {
+  list-style: upper-alpha;
+}
+aside.sidebar ol ol {
+  list-style: lower-roman;
+}
+aside.sidebar ol ol ol {
+  list-style: lower-alpha;
+}
+
+.widget_categories ul, .widget_archive ul, .widget_pages ul, .widget_meta ul {
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: 700;
+  color: #304566;
+}
+
+.widget_recent_comments ul, .widget_rss ul {
+  font-weight: 400;
+  color: inherit;
+}
+.widget_recent_comments ul a, .widget_rss ul a {
+  color: #ffa1ac;
+}
+.widget_recent_comments ul a:hover, .widget_rss ul a:hover {
+  color: #b3d0fd;
+}
+
+.widget {
+  margin-bottom: 40px;
+}
+.widget h1, .widget h2, .widget h3, .widget h4, .widget h5, .widget h6 {
+  font-weight: 900;
+  position: relative;
+  padding-top: 27px;
+  margin-bottom: 25px;
+}
+.widget h1::before, .widget h2::before, .widget h3::before, .widget h4::before, .widget h5::before, .widget h6::before {
+  width: 100px;
+  height: 5px;
+  background-color: #ffd3bd;
+  border-radius: 10px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.widget a {
+  color: inherit;
+}
+.widget a:hover {
+  color: #ffa1ac;
+}
+.widget ul {
+  list-style: none;
+  margin-bottom: 40px;
+}
+.widget ul.wp-block-categories, .widget ul.wp-block-archives {
+  color: #304566;
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: 700;
+}
+.widget ul li {
+  padding-left: 8px;
+}
+.widget ul li:before {
+  content: "";
+  background-size: contain;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 0.1rem;
+  margin-right: 15px;
+}
+.widget ul li:nth-child(odd)::before {
+  background-image: url("../svg/liodd.svg");
+}
+.widget ul li:nth-child(even)::before {
+  background-image: url("../svg/lieven.svg");
+}
+.widget .ale_item_blog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+.widget .ale_item_blog img {
+  max-width: 80px;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+.widget h4.entry-title {
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 26px;
+}
+.widget h4.entry-title::before {
+  display: none;
+}
+
+h5.widget_title {
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+  position: relative;
+  padding-top: 27px;
+  margin-bottom: 25px;
+}
+h5.widget_title::before {
+  width: 100px;
+  height: 5px;
+  background-color: #ffd3bd;
+  border-radius: 10px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }/*# sourceMappingURL=ale_theme_styles.css.map */
