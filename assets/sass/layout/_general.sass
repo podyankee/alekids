@@ -166,14 +166,17 @@ a
 			margin-left: auto
 			margin-right: auto
 .wp-caption
-	background: #f0f0f0
+	background: #fefbf4
 	width: auto
 	max-width: 99%
 	padding: 0
 	text-align: center
 	display: block
+	background-color: transparent
+	margin-bottom: 20px
 	&.alignnone
 		margin: 0
+		margin-bottom: 20px
 	&.alignleft
 		margin: 5px 20px 20px 0
 	&.alignright
@@ -464,6 +467,11 @@ hr
 			color: #000
 			background-color: #fdfbfb
 			letter-spacing: 0.05em
+		a
+			text-decoration: underline !important#000
+		td, th
+			padding: 10px 15px
+			border: 1px solid #f2f2d2
 	.tagsphar
 		clear: both
 	span
@@ -717,3 +725,8 @@ blockquote
 		position: absolute
 		top: 0
 		left: 0
+ul
+	.sub-menu
+		margin-left: 10px
+		font-weight: 700
+		color: $blue-dark
