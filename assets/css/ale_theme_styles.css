@@ -303,20 +303,20 @@ input[type=submit] {
   border: 0;
 }
 
-.comment-form .alekids_button {
+.alekids_contact_form .alekids_button {
   position: relative;
   z-index: 0;
   padding: 0 !important;
   min-height: 60px;
   min-width: 207px;
 }
-.comment-form .alekids_button svg {
+.alekids_contact_form .alekids_button svg {
   z-index: -1;
 }
-.comment-form .alekids_button button,
-.comment-form .alekids_button input[type=button],
-.comment-form .alekids_button input[type=reset],
-.comment-form .alekids_button input[type=submit] {
+.alekids_contact_form .alekids_button button,
+.alekids_contact_form .alekids_button input[type=button],
+.alekids_contact_form .alekids_button input[type=reset],
+.alekids_contact_form .alekids_button input[type=submit] {
   border-radius: 0;
   padding: 18px 40px;
   min-height: unset;
@@ -324,11 +324,15 @@ input[type=submit] {
   background-color: transparent;
   min-width: 130px;
 }
-.comment-form .alekids_button button:hover,
-.comment-form .alekids_button input[type=button]:hover,
-.comment-form .alekids_button input[type=reset]:hover,
-.comment-form .alekids_button input[type=submit]:hover {
+.alekids_contact_form .alekids_button button:hover,
+.alekids_contact_form .alekids_button input[type=button]:hover,
+.alekids_contact_form .alekids_button input[type=reset]:hover,
+.alekids_contact_form .alekids_button input[type=submit]:hover {
   background-color: transparent;
+}
+
+.alekids_contact_form .alekids_button {
+  min-width: 146px;
 }
 
 button:hover,
@@ -342,6 +346,7 @@ input[type=submit]:hover {
 
 input[type=text],
 input[type=email],
+input[type=phone],
 input[type=url],
 input[type=search],
 input[type=password],
@@ -350,7 +355,7 @@ textarea {
   height: 40px;
   font-family: inherit;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 40px;
   padding: 0 25px;
   color: #7d7d7d;
   margin-bottom: 20px;
@@ -362,6 +367,7 @@ textarea {
 }
 input[type=text].placeholder,
 input[type=email].placeholder,
+input[type=phone].placeholder,
 input[type=url].placeholder,
 input[type=search].placeholder,
 input[type=password].placeholder,
@@ -370,6 +376,7 @@ textarea.placeholder {
 }
 input[type=text]:-moz-placeholder,
 input[type=email]:-moz-placeholder,
+input[type=phone]:-moz-placeholder,
 input[type=url]:-moz-placeholder,
 input[type=search]:-moz-placeholder,
 input[type=password]:-moz-placeholder,
@@ -378,6 +385,7 @@ textarea:-moz-placeholder {
 }
 input[type=text]::-moz-placeholder,
 input[type=email]::-moz-placeholder,
+input[type=phone]::-moz-placeholder,
 input[type=url]::-moz-placeholder,
 input[type=search]::-moz-placeholder,
 input[type=password]::-moz-placeholder,
@@ -386,6 +394,7 @@ textarea::-moz-placeholder {
 }
 input[type=text]::-webkit-input-placeholder,
 input[type=email]::-webkit-input-placeholder,
+input[type=phone]::-webkit-input-placeholder,
 input[type=url]::-webkit-input-placeholder,
 input[type=search]::-webkit-input-placeholder,
 input[type=password]::-webkit-input-placeholder,
@@ -394,6 +403,7 @@ textarea::-webkit-input-placeholder {
 }
 input[type=text]::-ms-input-placeholder,
 input[type=email]::-ms-input-placeholder,
+input[type=phone]::-ms-input-placeholder,
 input[type=url]::-ms-input-placeholder,
 input[type=search]::-ms-input-placeholder,
 input[type=password]::-ms-input-placeholder,
@@ -402,6 +412,7 @@ textarea::-ms-input-placeholder {
 }
 input[type=text]:focus,
 input[type=email]:focus,
+input[type=phone]:focus,
 input[type=url]:focus,
 input[type=search]:focus,
 input[type=password]:focus,
@@ -689,6 +700,10 @@ hr {
   text-decoration: none;
 }
 
+.story a {
+  color: inherit;
+}
+
 .story img.size-auto,
 .story img.size-full,
 .story img.size-large,
@@ -914,6 +929,25 @@ hr {
           animation-play-state: paused;
 }
 
+.alekids_socialbox_dashed {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  stroke-width: 3;
+  stroke-dasharray: 7, 7;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  fill: transparent;
+  stroke: #fff;
+  -webkit-animation: dashed_moving 20s linear infinite both;
+          animation: dashed_moving 20s linear infinite both;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  z-index: -1;
+}
+
 .alekids_testimonial_dashed {
   position: absolute;
   left: 0;
@@ -978,6 +1012,63 @@ ul .sub-menu {
   color: #304566;
 }
 
+.alekids_overflow {
+  overflow: hidden;
+}
+
+.info_phone {
+  display: block;
+}
+
+.alekids_contact .success {
+  text-align: center;
+  color: #94edca;
+}
+.alekids_contact .error {
+  text-align: center;
+  color: #ffa1ac;
+}
+
+.alekids_contact_form .form_line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+.alekids_contact_form .form_line.submit_line {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 0;
+}
+.alekids_contact_form input[type=text],
+.alekids_contact_form input[type=email],
+.alekids_contact_form input[type=phone],
+.alekids_contact_form input[type=url],
+.alekids_contact_form input[type=search],
+.alekids_contact_form input[type=password] {
+  height: 50px;
+  line-height: 50px;
+  width: calc(33.333333% - 13.333333px);
+  margin-bottom: 0;
+}
+.alekids_contact_form textarea {
+  margin-bottom: 0;
+}
+
+a.alekids_button {
+  color: #fff;
+}
+a.alekids_button:hover {
+  color: #fff;
+}
+
 .alekids_button {
   background-color: #b3d0fd;
   border-radius: 30px;
@@ -993,6 +1084,7 @@ ul .sub-menu {
 }
 .alekids_button:hover {
   background-color: #ffd3bd;
+  color: #fff;
 }
 .alekids_button:hover .alekids_dashed {
   -webkit-animation-play-state: running;
@@ -1039,6 +1131,46 @@ ul .sub-menu {
     stroke-dashoffset: -1000;
   }
 }
+.alekids_socialbox {
+  position: relative;
+  z-index: 0;
+  background-color: #b3d0fd;
+  padding: 40px;
+  color: #fff;
+  border-radius: 30px;
+}
+.alekids_socialbox:hover .alekids_socialbox_dashed {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+.alekids_socialbox .social_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.alekids_socialbox .social_content .image_holder {
+  margin-right: 15px;
+  min-width: 64px;
+}
+.alekids_socialbox .social_content .text_holder h6 {
+  color: inherit;
+  font-weight: 900;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.alekids_socialbox .social_content .text_holder p {
+  color: inherit;
+  margin-bottom: 0;
+  font-size: 18px;
+  line-height: 24px;
+}
+
 header.top .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
