@@ -1,3 +1,7 @@
+a.alekids_button
+	color: #fff
+	&:hover
+		color: #fff
 .alekids_button
 	background-color: $blue
 	border-radius: 30px
@@ -11,6 +15,8 @@
 	transition: $trs
 	&:hover
 		background-color: $pink-light
+		color: #fff
+
 		.alekids_dashed
 			animation-play-state: running
 	.container
@@ -36,3 +42,32 @@
 @keyframes dashed_moving
 	100%
 		stroke-dashoffset: -1000
+
+.alekids_socialbox
+	position: relative
+	z-index: 0
+	background-color: $blue
+	padding: 40px
+	color: #fff
+	border-radius: 30px
+	&:hover
+		.alekids_socialbox_dashed
+			animation-play-state: running
+	.social_content
+		display: flex
+		align-items: center
+		justify-content: flex-start
+		.image_holder
+			margin-right: 15px
+			min-width: 64px
+		.text_holder
+			h6
+				color: inherit
+				font-weight: 900
+				font-size: 20px
+				margin-bottom: 5px
+			p
+				color: inherit
+				margin-bottom: 0
+				font-size: 18px
+				line-height: 24px
