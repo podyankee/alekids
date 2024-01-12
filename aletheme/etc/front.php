@@ -32,6 +32,8 @@ function ale_enqueue_scripts() {
 	
 	wp_register_script( 'venobox', ALETHEME_THEME_URL . '/assets/js/libs/venobox.min.js', array( 'jquery' ), ALETHEME_THEME_VERSION, true );
 	wp_register_script( 'slick', ALETHEME_THEME_URL . '/assets/js/libs/slick.min.js', array( 'jquery' ), ALETHEME_THEME_VERSION, true );
+	wp_register_script( 'alekids-appear', ALETHEME_THEME_URL . '/assets/js/libs/jquery.appear.js', array( 'jquery' ), ALETHEME_THEME_VERSION, true );
+	wp_register_script( 'alekids-counter', ALETHEME_THEME_URL . '/assets/js/libs/jquery.counter.js', array( 'jquery' ), ALETHEME_THEME_VERSION, true );
 	wp_enqueue_script( 'ale-scripts', ALETHEME_THEME_URL . '/assets/js/scripts.min.js', array( 'jquery' ), ALETHEME_THEME_VERSION, true );
 	
 
