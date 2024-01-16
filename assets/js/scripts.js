@@ -100,7 +100,7 @@ jQuery(function ($) {
 		});
 	}
 
-	// Timeline Slider
+	// Timeline Slider renewed
 	if ($('.alekids_timeline'.length)) {
 		$('.alekids_timeline').slick({
 			infinite: true,
