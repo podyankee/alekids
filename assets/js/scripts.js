@@ -100,6 +100,19 @@ jQuery(function ($) {
 		});
 	}
 
+	// Timeline Slider
+	if ($('.alekids_timeline'.length)) {
+		$('.alekids_timeline').slick({
+			infinite: true,
+			autoplay: true,
+			arrows: false,
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			dots: false,
+			swipe: true,
+		});
+	}
+
 	//Scroll to top
 
 	if ($('.alekids_scroll_top').length) {

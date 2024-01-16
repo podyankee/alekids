@@ -74,3 +74,51 @@
 		background: url('../svg/top-blue.svg') !important
 	&::after
 		background: url('../svg/bottom-blue.svg')
+.alekids_timeline
+	padding-bottom: 10px
+	cursor: move
+	cursor: -webkit-grab
+	cursor: -moz-grab
+	cursor: grab
+	&:active
+		cursor: -webkit-grabbing
+		cursor: -moz-grabbing
+		cursor: grabbing
+	.slick-slide
+		margin-left: 15px
+	.slick-list
+		margin-left: -15px
+	.timeline_item
+		width: calc( 25% - 15px )
+		position: relative
+		z-index: 0
+		&:hover
+			.alekids_mask
+				top: 10px
+				left: 10px
+		.line_content
+			background-color: #fefbf4
+			padding: 22px
+			box-sizing: border-box
+			margin-right: 10px
+			margin-bottom: 10px
+		.alekids_mask
+			position: absolute
+			width: calc( 100% - 10px )
+			height: calc( 100% - 10px )
+			top: 5px
+			left: 5px
+			z-index: -1
+			transition: $trs
+		.alekids_year
+			display: block
+			font-weight: 900
+			font-size: 72px
+			line-height: 72px
+			margin-bottom: 5px
+		.alekids_title
+			color: #304566
+			font-size: 30px
+			font-style: normal
+			font-weight: 900
+			line-height: 36px
