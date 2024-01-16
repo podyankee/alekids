@@ -1236,6 +1236,10 @@ a.alekids_button:hover {
   color: #7d7d7d;
 }
 
+.alekids_number {
+  visibility: hidden;
+}
+
 .alekids_number_color {
   width: 100%;
   text-align: center;
@@ -3987,4 +3991,62 @@ h5.widget_title::before {
 }
 .alekids_contact_box.counter_box::after {
   background: url("../svg/bottom-blue.svg");
+}
+
+.alekids_timeline {
+  padding-bottom: 10px;
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.alekids_timeline:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+.alekids_timeline .slick-slide {
+  margin-left: 15px;
+}
+.alekids_timeline .slick-list {
+  margin-left: -15px;
+}
+.alekids_timeline .timeline_item {
+  width: calc(25% - 15px);
+  position: relative;
+  z-index: 0;
+}
+.alekids_timeline .timeline_item:hover .alekids_mask {
+  top: 10px;
+  left: 10px;
+}
+.alekids_timeline .timeline_item .line_content {
+  background-color: #fefbf4;
+  padding: 22px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.alekids_timeline .timeline_item .alekids_mask {
+  position: absolute;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  top: 5px;
+  left: 5px;
+  z-index: -1;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.alekids_timeline .timeline_item .alekids_year {
+  display: block;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 72px;
+  margin-bottom: 5px;
+}
+.alekids_timeline .timeline_item .alekids_title {
+  color: #304566;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 36px;
 }/*# sourceMappingURL=ale_theme_styles.css.map */
