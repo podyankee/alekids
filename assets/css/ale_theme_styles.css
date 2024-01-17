@@ -2374,6 +2374,12 @@ nav ul.menu-header > li > a::before {
   top: 100%;
   left: 0;
 }
+.alekids_call_box.yellow_box::before {
+  background: url("../svg/about-yellow-top.svg") !important;
+}
+.alekids_call_box.yellow_box::after {
+  background: url("../svg/about-yellow-bottom.svg") !important;
+}
 
 .posts_grid {
   display: -webkit-box;
