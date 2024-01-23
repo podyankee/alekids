@@ -2376,9 +2376,12 @@ nav ul.menu-header > li > a::before {
 }
 .alekids_call_box.yellow_box::before {
   background: url("../svg/about-yellow-top.svg") !important;
+  opacity: 1 !important;
 }
 .alekids_call_box.yellow_box::after {
   background: url("../svg/about-yellow-bottom.svg") !important;
+  opacity: 1 !important;
+  z-index: 1;
 }
 
 .posts_grid {
@@ -4055,4 +4058,144 @@ h5.widget_title::before {
   font-style: normal;
   font-weight: 900;
   line-height: 36px;
+}
+
+.alekids_team_slider .slick-active .team_slide .line_content {
+  border-bottom-left-radius: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.alekids_team_slider .slick-current .team_slide .line_content {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 30px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.alekids_team_slider .slick-list {
+  margin-left: -20px;
+}
+.alekids_team_slider .slick-slide {
+  margin-left: 20px;
+}
+.alekids_team_slider .team_slide {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 128px;
+}
+.alekids_team_slider .team_slide .image_holder {
+  display: inline-block;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 100%;
+  position: absolute;
+  top: -128px;
+  left: 50%;
+  margin-left: -128px;
+}
+.alekids_team_slider .team_slide .image_holder img {
+  border-radius: 100%;
+}
+.alekids_team_slider .team_slide .line_content {
+  background-color: #7292de;
+  padding: 30px;
+  padding-top: 150px;
+  color: #fff;
+  text-align: center;
+  border-radius: 30px;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.alekids_team_slider .team_slide .line_content .team_name {
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 20px;
+}
+.alekids_team_slider .team_slide .line_content .team_text {
+  margin-bottom: 30px;
+}
+.alekids_team_slider .team_slide .line_content .team_text p:last-child {
+  margin-bottom: 0;
+}
+.alekids_team_slider .team_slide .line_content .team_social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.alekids_team_slider .team_slide .line_content .team_social a {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+.alekids_team_slider .team_slide .line_content .team_social a .mask {
+  width: 40px;
+  height: 40px;
+  border-color: #fff;
+}
+.alekids_team_slider .team_slide .line_content .team_social a .icon {
+  background-color: #fff;
+}
+.alekids_team_slider .slick-dots {
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  margin-top: 20px;
+  line-height: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.alekids_team_slider .slick-dots li {
+  list-style: none !important;
+  margin: 0 5px;
+  padding: 0;
+  line-height: 5px;
+}
+.alekids_team_slider .slick-dots li::before {
+  display: none;
+}
+.alekids_team_slider .slick-dots li.slick-active button, .alekids_team_slider .slick-dots li:hover button {
+  background-color: #304566;
+}
+.alekids_team_slider .slick-dots li button {
+  font-size: 0;
+  text-indent: -99999px;
+  width: 45px;
+  height: 5px;
+  min-height: unset;
+  padding: 0;
+  margin: 0;
+  background-color: #b3d0fd;
+  border-radius: 10px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }/*# sourceMappingURL=ale_theme_styles.css.map */

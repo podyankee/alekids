@@ -100,6 +100,18 @@ jQuery(function ($) {
 		});
 	}
 
+	// Team Slider
+	if ($('.alekids_team_slider'.length)) {
+		$('.alekids_team_slider').slick({
+			infinite: true,
+			autoplay: false,
+			arrows: false,
+			slidesToShow: 2,
+			slidesToScroll: 1,
+			dots: true,
+		});
+	}
+
 	// Timeline Slider renewed
 	if ($('.alekids_timeline'.length)) {
 		$('.alekids_timeline').slick({
