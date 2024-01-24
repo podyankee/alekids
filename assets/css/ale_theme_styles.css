@@ -1067,7 +1067,7 @@ ul .sub-menu {
   transition: all 0.3s ease-in-out;
 }
 .alekids_socialbox a:hover {
-  color: #fff;
+  color: inherit;
   opacity: 0.7;
 }
 
@@ -3921,6 +3921,13 @@ h5.widget_title::before {
 }
 .alekids_video:hover .image_holder a.open_video {
   opacity: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.alekids_video:hover .image_holder a.open_video .opener {
+  background-color: #fff8b8;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .alekids_video .mask {
   position: absolute;
@@ -3985,9 +3992,6 @@ h5.widget_title::before {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.alekids_video .image_holder a.open_video .opener:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-}
 .alekids_video .image_holder a.open_video .video_icon {
   width: 48px;
   height: 48px;
@@ -4024,8 +4028,8 @@ h5.widget_title::before {
   z-index: 0;
 }
 .alekids_timeline .timeline_item:hover .alekids_mask {
-  top: 10px;
-  left: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 .alekids_timeline .timeline_item .line_content {
   background-color: #fefbf4;
@@ -4039,8 +4043,10 @@ h5.widget_title::before {
   position: absolute;
   width: calc(100% - 10px);
   height: calc(100% - 10px);
-  top: 5px;
-  left: 5px;
+  top: 0px;
+  left: 0px;
+  margin-top: 5px;
+  margin-left: 5px;
   z-index: -1;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -4058,6 +4064,20 @@ h5.widget_title::before {
   font-style: normal;
   font-weight: 900;
   line-height: 36px;
+}
+
+.alekids_social_box {
+  position: relative;
+}
+.alekids_social_box::after {
+  content: "";
+  width: 100%;
+  height: 45px;
+  position: absolute;
+  bottom: 100%;
+  margin-bottom: -1px;
+  left: 0;
+  background: url("../svg/social-top.svg") center bottom repeat-x;
 }
 
 .alekids_team_slider .slick-active .team_slide .line_content {
