@@ -896,7 +896,17 @@ function ale_custom_sidebar_widgets_init() {
     register_sidebar(array(
         'name' => 'Main Sidebar',
         'id' => 'main-sidebar',
-        'description' => 'Appears as the  right sidebar on single blog post in case you selected "show sidebar" in meta data for specific post or theme options panel.',
+        'description' => 'Appears as the  right sidebar on single blog post in case you selected "show sidebar" in theme options panel.',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h5 class="widget_title">',
+        'after_title' => '</h5>',
+    ));
+
+    register_sidebar(array(
+        'name' => 'Shop Sidebar',
+        'id' => 'shop-sidebar',
+        'description' => 'Appears as the  right sidebar on shop archive in case you selected "show sidebar" in theme options panel.',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h5 class="widget_title">',
@@ -947,16 +957,16 @@ function alekids_add_custom_icon_for_heading() {
 
 
 	if (is_post_type_archive( 'galleries' )) {
-		$alekids_icon_url = get_template_directory_uri(  ) . '/assets/svg/gallery.svg';
-	} elseif (is_page('product')) {
-		$alekids_icon_url = get_template_directory_uri(  ) . '/assets/svg/sale.svg';
+		$alekids_icon_url = get_template_directory_uri() . '/assets/svg/gallery.svg';
+	} elseif (is_post_type_archive('product')) {
+		$alekids_icon_url = get_template_directory_uri() . '/assets/svg/sale.svg';
 	} elseif (is_page()) {
 		if (get_post_meta(get_the_ID(), 'ale_post_heading_icon', true)) {
-			$alekids_icon_url = get_template_directory_uri(  ) . '/assets/svg/' .get_post_meta(get_the_ID(), 'ale_post_heading_icon', true).'.svg';
+			$alekids_icon_url = get_template_directory_uri(). '/assets/svg/' .get_post_meta(get_the_ID(), 'ale_post_heading_icon', true).'.svg';
 		} 
 	}
 	else {
-		$alekids_icon_url = get_template_directory_uri(  ) . '/assets/svg/feather.svg';
+		$alekids_icon_url = get_template_directory_uri() . '/assets/svg/feather.svg';
 	}
 
 	if(!empty($alekids_icon_url)) {
@@ -1044,7 +1054,11 @@ function ale_get_breadcrumbs() {
             echo ale_wp_kses($before) . get_the_time('Y') . ale_wp_kses($after);
 
         } elseif ( is_single() && !is_attachment() ) {
-            if ( get_post_type() != 'post' ) {
+						if (function_exists('is_woocommerce') && is_woocommerce()) {
+							printf($link, esc_url(get_permalink(wc_get_page_id('shop'))), esc_html__('Shop', 'alekids'));
+							if ($show_current == 1) echo ale_wp_kses($delimiter) . ale_wp_kses($before) . get_the_title() . ale_wp_kses($after);
+						}
+            elseif ( get_post_type() != 'post' ) {
                 $post_type = get_post_type_object(get_post_type());
                 $slug = $post_type->rewrite;
                 printf($link, $home_link . '/' . $slug['slug'] . '/', $post_type->labels->singular_name);
@@ -1061,8 +1075,14 @@ function ale_get_breadcrumbs() {
             }
 
         } elseif ( !is_single() && !is_page() && get_post_type() != 'post' && !is_404() ) {
-            $post_type = get_post_type_object(get_post_type());
-            echo ale_wp_kses($before) . esc_attr($post_type->labels->singular_name) . ale_wp_kses($after);
+
+						if (function_exists('is_woocommerce') && is_woocommerce()) {
+							echo ale_wp_kses($before) . esc_html('Shop', 'alekids') . ale_wp_kses($after);
+						} else { 
+							$post_type = get_post_type_object(get_post_type());
+							echo ale_wp_kses($before) . esc_attr($post_type->labels->singular_name) . ale_wp_kses($after);
+						}
+
 
         } elseif ( is_attachment() ) {
             $parent = get_post($parent_id);
