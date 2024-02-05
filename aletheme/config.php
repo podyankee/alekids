@@ -26,6 +26,13 @@ function ale_get_options() {
         'right_fourth' => esc_html__('1/4 Right','ale')
     );
 
+		$archive_columns = array(
+			'1' => esc_html__('One Column', 'ale'),
+			'2' => esc_html__('Two Columns', 'ale'),
+			'3' => esc_html__('Three Columns', 'ale'),
+			'4' => esc_html__('Four Columns', 'ale')
+		);
+
     
     
 
@@ -476,6 +483,24 @@ function ale_get_options() {
                         "std" => "4",
                         "type" => "text",
                     );
+		$options[] = array("name" => esc_html__("Woocommerce Settings","ale"),
+                      "tab" => "ale-woocommerce-settings",
+                      "type" => "heading",
+                      "icon" => "fa-newspaper-o");
+
+		$options[] = array("name" => esc_html__("Columns Count","ale"),
+                      "desc" => esc_html__("Select the column count for WooCommerce pages", "ale"),
+                      "id" => "ale_woo_columns",
+                      "std" => "3",
+                      "type" => "select",
+                      "options" => $archive_columns);
+
+		$options[] = array("name" => esc_html__("Products per page","ale"),
+                      "desc" => esc_html__("Specify the products per page count. By default it is 9", "ale"),
+                      "id" => "ale_products_per_page",
+                      "std" => "9",
+                      "type" => "text");
+
 
 	return $options;
 }

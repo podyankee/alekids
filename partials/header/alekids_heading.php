@@ -40,6 +40,9 @@
 			}	elseif(is_tax('gallery-category')) {
 				echo esc_html('Gallery Category ', 'alekids');
 			}
+			elseif(function_exists('is_woocommerce') and is_woocommerce()) {
+				echo woocommerce_page_title();
+			}
 			else if(is_archive()) {
 					if ( is_day() ) :
 							echo sprintf( esc_html__( 'Daily Archive: %s', 'alekids' ), get_the_date() );

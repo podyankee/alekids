@@ -1,0 +1,220 @@
+.woocommerce
+	a.button
+		border-radius: 30px
+		background-color: #ffbebe
+		color: #fff
+		font-weight: 900
+		font-size: 18px
+		padding: 0 40px
+		height: 40px
+		line-height: 40px
+		display: inline-block
+		text-align: center
+		transition: background-color 0.3s ease-in-out
+	.alekids_shop_archive
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+	.shop_content
+		width: calc( 75% - 10px )
+		.alekids_pagination
+			margin-top: 80px
+	aside.sidebar
+		width: calc( 25% - 30px )
+	.top_shop_archive
+		margin-bottom: 40px
+		border-radius: 30px
+		background-color: #fefbf4
+		padding: 0 25px
+		min-height: 50px
+		display: flex
+		align-items: center
+		justify-content: space-between
+	.woocommerce-ordering, .woocommerce-result-count
+		margin-bottom: 0
+		float: none
+	select
+		font-size: 18px
+		color: #7d7d7d
+		border: none
+		background: transparent
+		min-height: 28px
+		line-height: 28px
+		-moz-appearance: none
+		-webkit-appearance: none
+		appearance: none
+		background-image: url('../svg/select.svg')
+		background-repeat: no-repeat
+		background-position-y: center
+		background-position-x: 97%
+		min-width: 235px
+		text-align-last: right
+		padding-right: 38px
+	.woocommerce-notices-wrapper
+		.woocommerce-message
+			margin-bottom: 40px
+			border-bottom-left-radius: 30px
+			border-bottom-right-radius: 30px
+			background-color: #fefbf4
+			border-top-color: #94edca
+			&::before
+				color: #94edca
+	.products
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+		flex-wrap: wrap
+		&.columns-2 .product
+			width: calc( 50% - 10px )
+		&.columns-3 .product
+			width: calc( 33.33333% - 13.33333px )
+		&.columns-4 .product
+			width: calc( 25% - 15px )
+		.product
+			width: 100%
+			margin-bottom: 20px
+			.product_item_holder
+				position: relative
+				background-color: #fefbf4
+				border-radius: 30px
+				padding: 20px
+				box-sizing: border-box
+				text-align: center
+				transition: all 0.3s ease-in-out
+				overflow-x: hidden
+				&:hover
+					.hover_content
+						left: 0
+				.hover_content
+					background-color: #ffbebe
+					text-align: center
+					color: #fff
+					position: absolute
+					top: 0
+					left: -100%
+					width: 100%
+					height: 100%
+					border-radius: 30px
+					padding: 20px
+					box-sizing: border-box
+					transition: all 0.3s ease-in-out
+					a
+						color: inherit
+						&:hover
+							color: #fff8b8
+					a.button
+						background-color: #fff
+						color: #ffbebe
+						&.loading::after
+							top: 0
+						&:hover
+							background-color: #fff8b8
+					.added_to_cart
+						font-size: 14px
+						display: block
+					h2
+						color: #fff
+						font-weight: 900
+						font-size: 20px
+						margin-bottom: 15px
+						transition: color 0.3s ease-in-out
+						&:hover
+							color: #fff8b8
+					span.price
+						display: block
+						margin-bottom: 20px
+						del
+							color: #fff
+							opacity: 1
+							.amount
+								color: #fff
+						.amount
+							color: #fff8b8
+					.woo_excerpt
+						padding-top: 20px
+						padding-bottom: 20px
+						margin: 20px 0
+						position: relative
+						&::before
+							content: ''
+							width: 100%
+							height: 5px
+							display: block
+							position: absolute
+							left: 0
+							top: 0
+							border-radius: 10px
+							overflow: hidden
+							background: url(../svg/hover-shop.svg) center center repeat-x
+						&::after
+							content: ''
+							width: 100%
+							height: 5px
+							display: block
+							position: absolute
+							left: 0
+							bottom: 0
+							border-radius: 10px
+							overflow: hidden
+							background: url(../svg/hover-shop.svg) center center repeat-x
+						p
+							margin-bottom: 0
+							text-align: center
+			img
+				margin-bottom: 17px
+			h2.woocommerce-loop-product__title
+				font-weight: 900
+				font-size: 20px
+				line-height: 26px
+				margin-bottom: 20px
+			.price
+				font-size: 0
+				.amount
+					font-weight: 900
+					font-size: 40px
+					line-height: 40px
+					color: #ffa1ac
+				ins
+					text-decoration: none
+					font-weight: 900
+				del
+					color: #c4c4c4
+					.amount
+						opacity: 1
+						color: #c4c4c4
+						font-size: 20px
+	span.onsale
+		border: 10px solid #fff
+		background-color: #b3d0fd
+		width: 72px
+		height: 72px
+		padding: 0
+		line-height: 72px
+		font-weight: 900
+		font-size: 18px
+		top: -30px
+		left: 50%
+		margin-left: -46px
+		text-transform: uppercase
+		transform: rotate(-22deg)
+	.alekids_shop_single
+		.product
+			.top_product
+				display: flex
+				align-items: flex-start
+				justify-content: space-between
+				.left_content, .right_content
+					width: calc( 50% - 45px )
+					float: none
+				.right_content
+					background-color: #fefbf4
+					border-radius: 30px
+					padding: 45px
+					box-sizing: border-box
+					position: relative
+					span.onsale
+						top: 5px
+				.right_content div.images
+					width: 100%
+					float: none
+					margin-bottom: 0
