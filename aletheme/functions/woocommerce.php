@@ -186,6 +186,8 @@ add_theme_support('wc-product-gallery-lightbox');
 add_theme_support('wc-product-gallery-slider');
 
 
+//Move product rating on single page
+// remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
 
 }
 

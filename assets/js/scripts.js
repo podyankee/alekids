@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 jQuery(function ($) {
-	'use strict';
+	('use strict');
 
 	$('.search_opener').on('click', e => {
 		e.preventDefault();
@@ -13,6 +13,77 @@ jQuery(function ($) {
 			$('.alekids_search_modal').hide(500);
 		}
 	});
+
+	//Scroll to top
+
+	if ($('.alekids_scroll_top').length) {
+		var scroll_top_duration = 700;
+		$('.alekids_scroll_top').on('click', function (event) {
+			event.preventDefault();
+			$('body,html').animate(
+				{
+					scrollTop: 0,
+				},
+				scroll_top_duration,
+			);
+		});
+	}
+
+	//Add and remove goods
+
+	if ($('.ale_plus').length) {
+		$('form').on('click', '.ale_plus, .ale_minus', function () {
+			// Get current quantity values
+			var qty = $(this).closest('.quantity').find('.qty');
+			var val = parseFloat(qty.val());
+			var max = parseFloat(qty.attr('max'));
+			var min = parseFloat(qty.attr('min'));
+			var step = parseFloat(qty.attr('step'));
+
+			// Change the value if plus or minus
+			if ($(this).is('.ale_plus')) {
+				if (max && max <= val) {
+					qty.val(max);
+				} else {
+					qty.val(val + step);
+				}
+			} else {
+				if (min && min >= val) {
+					qty.val(min);
+				} else if (val >= 1) {
+					qty.val(val - step);
+				}
+			}
+			qty.change();
+		});
+
+		$(document.body).on('updated_cart_totals', function () {
+			$('form').on('click', '.ale_plus, .ale_minus', function () {
+				// Get current quantity values
+				var qty = $(this).closest('.quantity').find('.qty');
+				var val = parseFloat(qty.val());
+				var max = parseFloat(qty.attr('max'));
+				var min = parseFloat(qty.attr('min'));
+				var step = parseFloat(qty.attr('step'));
+
+				// Change the value if plus or minus
+				if ($(this).is('.ale_plus')) {
+					if (max && max <= val) {
+						qty.val(max);
+					} else {
+						qty.val(val + step);
+					}
+				} else {
+					if (min && min >= val) {
+						qty.val(min);
+					} else if (val > 1) {
+						qty.val(val - step);
+					}
+				}
+				qty.change();
+			});
+		});
+	}
 
 	//Alekids button style
 
@@ -122,21 +193,6 @@ jQuery(function ($) {
 			slidesToScroll: 1,
 			dots: false,
 			swipe: true,
-		});
-	}
-
-	//Scroll to top
-
-	if ($('.alekids_scroll_top').length) {
-		var scroll_top_duration = 700;
-		$('.alekids_scroll_top').on('click', function (event) {
-			event.preventDefault();
-			$('body,html').animate(
-				{
-					scrollTop: 0,
-				},
-				scroll_top_duration,
-			);
 		});
 	}
 
