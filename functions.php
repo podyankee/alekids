@@ -10,6 +10,8 @@ if ( get_stylesheet_directory() == get_template_directory() ) {
     define('ALETHEME_URL', get_theme_root_uri() . '/ale/aletheme');
 }
 
+
+
 require_once ALETHEME_PATH . '/init.php';
 
 load_theme_textdomain( 'ale', get_template_directory() . '/lang' );

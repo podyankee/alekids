@@ -1,20 +1,20 @@
 <?php get_header(); ?>
-<?php get_template_part('partials/page_heading'); ?>
-    <div class="content_wrapper flex_container cf">
-        <!-- Content -->
-        <div class="story errorpage ale_blog_archive content cf">
+<div class="wrapper not_found_page">
+	<!-- Content -->
 
+	<h2 class="sub-title errorh1"><?php esc_html_e('Error 404','ale'); ?></h2>
+	<p class="errorp"><?php esc_html_e('Sorry, but the page you\'re looking for has not found. Try checking the URL for errors, then hit the refresh button on your browser.','ale'); ?></p>
 
+	<a href="<?php echo esc_js('javascript:history.go(-1)'); ?>" class="alekids_button">
+		<div class="container">
+			<span>Go Back</span>
+			<span>
+				<svg class="alekids_dashed">
+					<rect x="5px" y="5px" rx="25px" ry="25px" width="162.365" height="53"></rect>
+				</svg>
+			</span>
+		</div>
+	</a>
 
-            <div class="padding error_page story cf">
-
-                <h2 class="sub-title errorh1"><?php esc_html_e('Error 404','ale'); ?></h2>
-                <p class="errorp"><?php esc_html_e('Sorry, but the page you\'re looking for has not found. Try checking the URL for errors, then hit the refresh button on your browser.','ale'); ?></p>
-
-                <a href="<?php echo esc_js('javascript:history.go(-1)'); ?>" class="ale_button"><?php esc_html_e('Go Back','ale'); ?></a>
-
-
-            </div>
-        </div>
-    </div>
+</div>
 <?php get_footer(); ?>

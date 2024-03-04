@@ -1,3 +1,8 @@
+@import "normalize.css"
+@import "helpers/vars"
+@import "helpers/mixins"
+@import "layout/general"
+
 .woocommerce
 	a.button
 		border-radius: 30px
@@ -21,6 +26,28 @@
 			margin-top: 80px
 	aside.sidebar
 		width: calc( 25% - 30px )
+		.alekids_search
+			background-color: #fff8b8
+			border-radius: 30px
+			box-sizing: border-box
+			width: 100%
+			height: 50px
+			display: flex
+			align-items: center
+			justify-content: center
+			padding-left: 30px
+			padding-right: 6px
+			input.searchinput
+				height: 30px
+				background-color: transparent
+				border: none
+				width: calc( 100% - 40px )
+				margin-bottom: 0
+				padding-left: 0
+				color: #304566
+				font-size: 16px
+				+placeholder
+					color: #304566
 	.top_shop_archive
 		margin-bottom: 40px
 		border-radius: 30px
@@ -80,7 +107,7 @@
 				box-sizing: border-box
 				text-align: center
 				transition: all 0.3s ease-in-out
-				overflow-x: hidden
+				overflow: hidden
 				&:hover
 					.hover_content
 						left: 0
@@ -276,9 +303,10 @@
 					align-items: flex-start
 					justify-content: flex-start
 					p.price
-						font-size: 60px
+						font-size: 50px
 						font-weight: 900
 						display: flex
+						flex-direction: column
 						margin-bottom: 45px
 						width: 120px
 						height: 120px
@@ -291,6 +319,7 @@
 						order: -5
 						del
 							font-size: 18px
+							margin-bottom: 5px
 						ins
 							text-decoration: none
 							font-weight: 900
@@ -649,3 +678,109 @@
 			font-size: 18px
 			line-height: 38px
 			color: #304566
+.woocommerce-error, .woocommerce-info, .woocommerce-message
+	background-color: #fefbf4
+
+.woocommerce
+	.shop_table
+		.product-quantity
+			.quantity
+				display: inline-flex
+				background-color: #b3d0fd
+				border-radius: 40px
+				min-height: 70px
+				align-items: center
+				justify-content: center
+.wc-block-product-top-rated, .wc-block-rating-filter, .widget_recently_viewed_products, .widget_products, .widget_shopping_cart, .widget_rating_filter, .widget_top_rated_products
+	ul
+		margin-left: 0
+		li
+			list-style: none !important
+			&::before
+				display: none !important
+
+.widget_price_filter
+	.price_slider_amount
+		display: flex
+		align-items: center
+		justify-content: space-between
+		.button
+			order: 1
+	.price_slider
+		background-color: #b3d0fd !important
+		border-radius: 0 !important
+		height: 30px !important
+		box-sizing: border-box
+		margin: 0 20px !important
+		margin-bottom: 15px !important
+		position: relative
+		&::before
+			position: absolute
+			content: ''
+			width: 20px
+			height: 30px
+			background-color: #b3d0fd
+			border-top-left-radius: 30px
+			border-bottom-left-radius: 30px
+			left: -20px
+			top: 0
+		&::after
+			position: absolute
+			content: ''
+			width: 20px
+			height: 30px
+			background-color: #b3d0fd
+			border-top-right-radius: 30px
+			border-bottom-right-radius: 30px
+			right: -20px
+			top: 0
+		.ui-slider-range
+			background-color: #fff8b8 !important
+			height: 6px !important
+			top: 12px !important
+		.ui-slider-handle
+			width: 15px !important
+			height: 15px !important
+			background-color: #7292de !important
+			border-radius: 100% !important
+			top: 7px !important
+.product_list_widget, .wc-block-grid__products, .widget_rating_filter
+	li
+		border: 0
+		background: #fefbf4
+		padding: 20px !important
+		padding-bottom: 10px !important
+		box-sizing: border-box
+		border-radius: 30px
+		margin-bottom: 20px !important
+		font-weight: 900
+		color: #304566
+		font-size: 20px
+		a
+			font-weight: inherit
+			color: inherit
+			font-size: inherit
+		.product-title
+			margin-bottom: 10px
+			display: block
+		.amount
+			color: #b3d0fd
+			font-size: 20px
+			display: inline-block
+			padding-bottom: 10px
+		del, bdi, ins
+			color: #b3d0fd
+		.star-rating
+			margin-bottom: 10px
+			color: #ffa1ac
+			font-size: 0.6em
+			&::before
+				color: #ffa1ac
+			&:hover
+				opacity: 0.8
+		img
+			width: 60px !important
+			float: left !important
+			margin-right: 20px !important
+			margin-left: 0
+			padding-bottom: 10px

@@ -1,12 +1,13 @@
 <?php get_header(); ?>
 
 <div class="wrapper">
-	<div class="posts_grid">
-		<?php
+	<?php
 		$alekids_blog_grid = ['featured_image' => 'small', 'post_class'=>'smallpost'];
 		$i=1;
 		
-		if (have_posts()) : while (have_posts()) : the_post();
+		if (have_posts()) {
+			echo '<div class="posts_grid ">';
+			while (have_posts()) : the_post();
 					if ($i == 4) {
 						$alekids_blog_grid['featured_image'] = 'post-bigimage';
 						$alekids_blog_grid['post_class'] = 'bigpost';
@@ -16,12 +17,13 @@
 					}
 					get_template_part('partials/postpreview', '', $alekids_blog_grid);
 					$i++;
-					endwhile; else: 
-							get_template_part('partials/notfound');
-					endif; ?>
+					endwhile;
+					echo '</div>';
+					get_template_part('partials/pagination'); 
+	} else {
+	get_template_part('partials/notfound');
+	} ?>
 
-	</div>
-	<?php get_template_part('partials/pagination'); ?>
 </div>
 
 <?php get_footer(); ?>

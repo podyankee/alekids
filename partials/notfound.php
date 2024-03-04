@@ -1,3 +1,3 @@
-<section class="grid-item not-found">
+<section class="not-found">
 	<p><?php esc_html_e('No results were found for the requested page.', 'ale');?></p>
 </section>

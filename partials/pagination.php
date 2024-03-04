@@ -21,7 +21,7 @@ $right_arrow_disabled = '<svg width="100" height="100" viewBox="0 0 100 100" fil
 ';
 ?>
 
-
+<?php if($wp_query->max_num_pages > 1){ ?>
 <div class="alekids_pagination">
 	<div class="prev_posts">
 		<?php if(get_previous_posts_link()) { echo get_previous_posts_link($left_arrow); }
@@ -34,4 +34,6 @@ $right_arrow_disabled = '<svg width="100" height="100" viewBox="0 0 100 100" fil
 	</div>
 </div>
 
-<?php
+<?php } else {
+	echo '<div class="bottom_separator"></div>';
+} ?>

@@ -29,6 +29,15 @@ jQuery(function ($) {
 		});
 	}
 
+	//Submit search form on click
+	if ($('.alekids_submit_search').length) {
+		$('.alekids_submit_search').on('click', function (e) {
+			e.preventDefault();
+
+			$('#searchform').submit();
+		});
+	}
+
 	//Add and remove goods
 
 	if ($('.ale_plus').length) {

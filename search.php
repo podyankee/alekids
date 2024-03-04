@@ -1,47 +1,29 @@
 <?php get_header(); ?>
-<?php get_template_part('partials/page_heading');
 
-//Sidebar position based on theme options
-$ale_sidebar_position = ale_get_option('blog_sidebar_position');
-$sidebar_class = '';
+<div class="wrapper">
+	<?php
+		$alekids_blog_grid = ['featured_image' => 'small', 'post_class'=>'smallpost'];
+		$i=1;
+		
+		if (have_posts()) {
+			echo '<div class="posts_grid search_archive_page">';
+			while (have_posts()) : the_post();
+					if ($i == 4) {
+						$alekids_blog_grid['featured_image'] = 'post-bigimage';
+						$alekids_blog_grid['post_class'] = 'bigpost';
+					} else {
+						$alekids_blog_grid['featured_image'] = 'post-smallimage';
+						$alekids_blog_grid['post_class'] = 'smallpost';
+					}
+					get_template_part('partials/postpreview', '', $alekids_blog_grid);
+					$i++;
+					endwhile;
+					echo '</div>';
+					get_template_part('partials/pagination'); 
+	} else {
+	get_template_part('partials/notfound');
+	} ?>
 
-if($ale_sidebar_position){
-    $sidebar_class = 'sidebar_position_'. $ale_sidebar_position;
-}
-?>
+</div>
 
-    <div class="content_wrapper blog_posts flex_container <?php  echo esc_attr($sidebar_class); ?> cf">
-
-        <?php if($ale_sidebar_position  !== 'no'){
-            get_sidebar();
-        } ?>
-        <!-- Content -->
-        <div class="story ale_blog_archive content cf">
-            <?php
-            //Columns Settings
-            $ale_blog_columns = ale_get_option('default_blog_columns');
-            $ale_columns_class = '';
-            if($ale_blog_columns){
-                $ale_columns_class = 'ale_blog_columns_'.esc_attr($ale_blog_columns);
-            }
-            //Text Align Settings
-            $ale_blog_text_align = ale_get_option('default_blog_text_align');
-            $ale_text_align_class = '';
-            if($ale_blog_text_align){
-                $ale_text_align_class = 'ale_blog_text_align_'.esc_attr($ale_blog_text_align);
-            }
-            ?>
-            <div class="grid <?php echo esc_attr($ale_columns_class)." ".esc_attr($ale_text_align_class); ?>">
-                <div class="grid-sizer"></div>
-                <div class="gutter-sizer"></div>
-                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                    <?php get_template_part('partials/postpreview' );?>
-                <?php endwhile; else: ?>
-                    <?php get_template_part('partials/notfound')?>
-                <?php endif; ?>
-            </div>
-            <?php get_template_part('partials/pagination'); ?>
-        </div>
-
-    </div>
 <?php get_footer(); ?>

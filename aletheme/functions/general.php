@@ -1086,12 +1086,6 @@ function ale_get_breadcrumbs() {
 
         } elseif ( is_attachment() ) {
             $parent = get_post($parent_id);
-            $cat = get_the_category($parent->ID); $cat = $cat[0];
-            $cats = get_category_parents($cat, TRUE, $delimiter);
-            $cats = str_replace('<a', $link_before . '<a' . $link_attr, $cats);
-            $cats = str_replace('</a>', '</a>' . $link_after, $cats);
-            if ($show_title == 0) $cats = preg_replace('/ title="(.*?)"/', '', $cats);
-            echo ale_wp_kses($cats);
             printf($link, get_permalink($parent), $parent->post_title);
             if ($show_current == 1) echo ale_wp_kses($delimiter) . ale_wp_kses($before) . get_the_title() . ale_wp_kses($after);
 
@@ -1322,6 +1316,7 @@ function ale_wp_kses($ale_string){
 add_action( 'after_setup_theme', 'ale_theme_slug_setup' );
 function ale_theme_slug_setup() {
         add_theme_support( 'title-tag' );
+				remove_theme_support('widgets-block-editor');
 }
 
 

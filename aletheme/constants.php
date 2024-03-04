@@ -56,10 +56,7 @@ require_once (ALETHEME_PATH. '/etc/nav.php');
 require_once (ALETHEME_PATH. '/etc/system.php');
 
 
-require_once (ALETHEME_PATH. '/functions/customizer.php');
 require_once (ALETHEME_PATH. '/functions/images_media.php');
-require_once (ALETHEME_PATH. '/functions/infinite-load.php');
-require_once (ALETHEME_PATH. '/functions/load-more.php');
 require_once (ALETHEME_PATH. '/functions/class-tgm-plugin-activation.php');
 
 require_once (ALETHEME_PATH. '/functions/woocommerce.php');

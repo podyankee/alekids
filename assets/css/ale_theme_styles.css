@@ -635,15 +635,6 @@ hr {
   font-size: 12px;
   margin: 0;
 }
-.story section.not-found {
-  padding-top: 230px !important;
-  width: 100% !important;
-  margin-bottom: 0 !important;
-}
-.story section.not-found p {
-  text-align: center;
-  margin-bottom: 0 !important;
-}
 .story .wp-smiley {
   margin: 0;
 }
@@ -1075,6 +1066,43 @@ ul .sub-menu {
 .alekids_socialbox a:hover {
   color: inherit;
   opacity: 0.7;
+}
+
+section.not-found {
+  width: 100% !important;
+  margin-bottom: 100px !important;
+}
+section.not-found p {
+  text-align: center;
+  margin-bottom: 0 !important;
+}
+
+.bottom_separator {
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.not_found_page {
+  text-align: center;
+  margin-bottom: 100px !important;
+}
+.not_found_page h2, .not_found_page p {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.not_found_page h2 {
+  font-size: 80px;
+}
+
+.attachment_page {
+  text-align: center;
+  margin-bottom: 100px !important;
+}
+.attachment_page h1 {
+  font-size: 80px;
+}
+.attachment_page p.attachment {
+  text-align: center;
 }
 
 a.alekids_button {
