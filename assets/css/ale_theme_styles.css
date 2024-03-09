@@ -90,7 +90,6 @@ html {
 }
 
 body,
-div,
 span,
 applet,
 object,
@@ -122,8 +121,7 @@ figure,
 footer,
 header,
 hgroup,
-nav,
-section {
+nav {
   margin: 0;
   padding: 0;
   border: 0;
@@ -906,7 +904,10 @@ hr {
 .wrapper {
   width: 100% !important;
   max-width: 1180px !important;
-  margin: 0 auto !important;
+  margin-top: 0;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  margin-bottom: 0;
 }
 
 .alekids_images_grid_dashed {
@@ -4252,4 +4253,65 @@ h5.widget_title::before {
   border-radius: 10px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+.alekids_product_slider .products {
+  position: relative;
+}
+.alekids_product_slider .products .slick-arrow {
+  background-color: transparent;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  border-radius: 0;
+  border: 0;
+}
+.alekids_product_slider .products .slick-arrow.slick-next {
+  background-image: url('data:image/svg+xml,<svg width="86" height="100" viewBox="0 0 86 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.25174 7.82218C0.264023 3.7998 1.09817 0 5.13331 0C5.24941 0 5.35949 0.0262554 5.47222 0.0349269C5.92941 0.00602188 6.40657 0.0238466 6.92518 0.156569C35.453 7.46375 61.3521 22.9648 84.3224 41.0509C85.6135 42.0681 85.9818 43.3076 85.7737 44.474C85.8631 45.0942 85.918 45.7142 85.9192 46.3429C85.9204 47.7544 85.2139 49.0166 84.1504 49.8221C84.0115 50.0112 83.8751 50.2008 83.6959 50.3817C63.0857 71.1682 39.0818 89.7382 11.3086 99.7312C10.4061 100.055 9.60106 100.064 8.89529 99.8757C7.24049 99.8502 5.60494 99.724 3.96483 99.4183C1.89884 99.0341 0.643875 96.8204 0.774673 94.8277C0.772263 94.7371 0.749146 94.6576 0.749146 94.5647C0.749146 68.2642 -0.650337 41.9811 0.598839 15.6887C0.682182 13.925 0.241859 10.8126 0.25174 7.82218ZM9.49892 91.0777C34.9368 81.7988 56.9899 64.5926 76.0305 45.6323C56.1661 30.278 33.8615 17.1318 9.6897 10.0153C7.92096 37.0129 9.33489 64.0508 9.49892 91.0777Z" fill="%23B3D0FD"/></svg>');
+  background-repeat: no-repeat;
+  right: -140px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.alekids_product_slider .products .slick-arrow.slick-next:hover {
+  background-image: url('data:image/svg+xml,<svg width="86" height="100" viewBox="0 0 86 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.25174 7.82218C0.264023 3.7998 1.09817 0 5.13331 0C5.24941 0 5.35949 0.0262554 5.47222 0.0349269C5.92941 0.00602188 6.40657 0.0238466 6.92518 0.156569C35.453 7.46375 61.3521 22.9648 84.3224 41.0509C85.6135 42.0681 85.9818 43.3076 85.7737 44.474C85.8631 45.0942 85.918 45.7142 85.9192 46.3429C85.9204 47.7544 85.2139 49.0166 84.1504 49.8221C84.0115 50.0112 83.8751 50.2008 83.6959 50.3817C63.0857 71.1682 39.0818 89.7382 11.3086 99.7312C10.4061 100.055 9.60106 100.064 8.89529 99.8757C7.24049 99.8502 5.60494 99.724 3.96483 99.4183C1.89884 99.0341 0.643875 96.8204 0.774673 94.8277C0.772263 94.7371 0.749146 94.6576 0.749146 94.5647C0.749146 68.2642 -0.650337 41.9811 0.598839 15.6887C0.682182 13.925 0.241859 10.8126 0.25174 7.82218ZM9.49892 91.0777C34.9368 81.7988 56.9899 64.5926 76.0305 45.6323C56.1661 30.278 33.8615 17.1318 9.6897 10.0153C7.92096 37.0129 9.33489 64.0508 9.49892 91.0777Z" fill="%23FFA1AC"/></svg>');
+  right: -130px;
+}
+.alekids_product_slider .products .slick-arrow.slick-prev {
+  background-image: url('data:image/svg+xml,<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M92.7482 7.82218C92.7359 3.7998 91.9018 0 87.8666 0C87.7505 0 87.6404 0.0262554 87.5277 0.0349269C87.0705 0.00602188 86.5934 0.0238466 86.0748 0.156569C57.547 7.46375 31.6478 22.9648 8.67751 41.0509C7.38642 42.0681 7.01812 43.3076 7.22624 44.474C7.13687 45.0942 7.08196 45.7142 7.08075 46.3429C7.07955 47.7544 7.78603 49.0166 8.8495 49.8221C8.98848 50.0112 9.12482 50.2008 9.30403 50.3817C29.9143 71.1682 53.9182 89.7382 81.6913 99.7312C82.5939 100.055 83.3989 100.064 84.1046 99.8757C85.7595 99.8502 87.395 99.724 89.0351 99.4183C91.1011 99.0341 92.3561 96.8204 92.2253 94.8277C92.2277 94.7371 92.2508 94.6576 92.2508 94.5647C92.2508 68.2642 93.6503 41.9811 92.4011 15.6887C92.3178 13.925 92.7581 10.8126 92.7482 7.82218ZM83.501 91.0777C58.0632 81.7988 36.0101 64.5926 16.9694 45.6323C36.8339 30.278 59.1384 17.1318 83.3102 10.0153C85.079 37.0129 83.665 64.0508 83.501 91.0777Z" fill="%23B3D0FD"/></svg>');
+  background-repeat: no-repeat;
+  left: -140px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.alekids_product_slider .products .slick-arrow.slick-prev:hover {
+  background-image: url('data:image/svg+xml,<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M92.7482 7.82218C92.7359 3.7998 91.9018 0 87.8666 0C87.7505 0 87.6404 0.0262554 87.5277 0.0349269C87.0705 0.00602188 86.5934 0.0238466 86.0748 0.156569C57.547 7.46375 31.6478 22.9648 8.67751 41.0509C7.38642 42.0681 7.01812 43.3076 7.22624 44.474C7.13687 45.0942 7.08196 45.7142 7.08075 46.3429C7.07955 47.7544 7.78603 49.0166 8.8495 49.8221C8.98848 50.0112 9.12482 50.2008 9.30403 50.3817C29.9143 71.1682 53.9182 89.7382 81.6913 99.7312C82.5939 100.055 83.3989 100.064 84.1046 99.8757C85.7595 99.8502 87.395 99.724 89.0351 99.4183C91.1011 99.0341 92.3561 96.8204 92.2253 94.8277C92.2277 94.7371 92.2508 94.6576 92.2508 94.5647C92.2508 68.2642 93.6503 41.9811 92.4011 15.6887C92.3178 13.925 92.7581 10.8126 92.7482 7.82218ZM83.501 91.0777C58.0632 81.7988 36.0101 64.5926 16.9694 45.6323C36.8339 30.278 59.1384 17.1318 83.3102 10.0153C85.079 37.0129 83.665 64.0508 83.501 91.0777Z" fill="%23FFA1AC"/></svg>');
+  left: -130px;
+}
+.alekids_product_slider .products .product {
+  margin-top: 50px;
+}
+.alekids_product_slider .products .product h2.woocommerce-loop-product__title {
+  font-size: 30px !important;
+  line-height: 36px !important;
+}
+.alekids_product_slider .products .product .product_item_holder {
+  padding: 30px !important;
+}
+.alekids_product_slider .products .product .product_item_holder .hover_content .woocommerce-loop-product__title, .alekids_product_slider .products .product .product_item_holder .hover_content .woo_excerpt {
+  margin-bottom: 30px !important;
+}
+.alekids_product_slider .products .product .product_item_holder img {
+  display: inline-block;
+  max-height: 100% !important;
+  margin-bottom: 20px !important;
+}
+.alekids_product_slider .products .product a.button {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+.alekids_product_slider .products .slick-list {
+  margin-left: -20px;
 }/*# sourceMappingURL=ale_theme_styles.css.map */

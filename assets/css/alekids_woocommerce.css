@@ -90,7 +90,6 @@ html {
 }
 
 body,
-div,
 span,
 applet,
 object,
@@ -122,8 +121,7 @@ figure,
 footer,
 header,
 hgroup,
-nav,
-section {
+nav {
   margin: 0;
   padding: 0;
   border: 0;
@@ -906,7 +904,10 @@ hr {
 .wrapper {
   width: 100% !important;
   max-width: 1180px !important;
-  margin: 0 auto !important;
+  margin-top: 0;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  margin-bottom: 0;
 }
 
 .alekids_images_grid_dashed {
@@ -1249,8 +1250,16 @@ section.not-found p {
 .woocommerce .products.columns-3 .product {
   width: calc(33.33333% - 13.33333px);
 }
+.woocommerce .products.columns-3 .product img {
+  max-height: 235px;
+  width: auto;
+}
 .woocommerce .products.columns-4 .product {
   width: calc(25% - 15px);
+}
+.woocommerce .products.columns-4 .product img {
+  max-height: 235px;
+  width: auto;
 }
 .woocommerce .products .product {
   width: 100%;
@@ -1286,6 +1295,19 @@ section.not-found p {
           box-sizing: border-box;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .woocommerce .products .product .product_item_holder .hover_content a {
   color: inherit;
@@ -1411,6 +1433,8 @@ section.not-found p {
   text-transform: uppercase;
   -webkit-transform: rotate(-22deg);
           transform: rotate(-22deg);
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 .woocommerce .alekids_shop_single div.product.product-type-variable p.price, .woocommerce .alekids_shop_single div.product.product-type-grouped p.price {
   font-size: 30px !important;

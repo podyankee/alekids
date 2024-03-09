@@ -94,8 +94,14 @@
 			width: calc( 50% - 10px )
 		&.columns-3 .product
 			width: calc( 33.33333% - 13.33333px )
+			img
+				max-height: 235px
+				width: auto
 		&.columns-4 .product
 			width: calc( 25% - 15px )
+			img
+				max-height: 235px
+				width: auto
 		.product
 			width: 100%
 			margin-bottom: 20px
@@ -124,6 +130,10 @@
 					padding: 20px
 					box-sizing: border-box
 					transition: all 0.3s ease-in-out
+					display: flex
+					flex-direction: column
+					align-items: center
+					justify-content: center
 					a
 						color: inherit
 						&:hover
@@ -223,6 +233,7 @@
 		margin-left: -46px
 		text-transform: uppercase
 		transform: rotate(-22deg)
+		box-sizing: content-box
 	.alekids_shop_single
 		div.product
 			&.product-type-variable, &.product-type-grouped
