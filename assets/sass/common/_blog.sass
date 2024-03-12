@@ -1,0 +1,159 @@
+.posts_grid
+	display: flex
+	align-items: flex-start
+	justify-content: space-between
+	flex-wrap: wrap
+	&.one_columns
+		.alekids_blog_preview
+			width: 100%
+	&.two_columns
+		.alekids_blog_preview
+			width: calc(50% - 10px)
+	&.three_columns
+		.alekids_blog_preview
+			width: calc(33.33333% - 13.33333px)
+	&.four_columns
+		.alekids_blog_preview
+			width: calc(25% - 15px)
+.alekids_blog_preview
+	width: calc( 33.33333% - 13.33333px )
+	margin-bottom: 40px
+	&.bigpost
+		width: calc( 66.66666% - 6.66666px )
+	&:nth-child(2n)
+		.featured_image span.category a,
+		.featured_image .featured_image_holder a
+			background-color: $pink-dark
+		h3:hover, .read_more_blog
+			color: $pink-dark
+	&:nth-child(3n)
+		.featured_image span.category a,
+		.featured_image .featured_image_holder a
+			background-color: #7292de
+		h3:hover, .read_more_blog
+			color: #7292de
+	&:nth-child(5n)
+		.featured_image span.category a,
+		.featured_image .featured_image_holder a
+			background-color: $green
+			h3:hover, .read_more_blog
+				color: $green
+
+	.featured_image
+		margin-bottom: 24px
+		position: relative
+		.featured_image_holder
+			overflow: hidden
+			border-radius: 30px
+			img
+				transition: $trs
+			a
+				display: block
+				background-color: $yellow-dark
+			&:hover img
+				transform: scale(1.05)
+				opacity: 0.7
+		span.category
+			position: absolute
+			top: 20px
+			right: 20px
+			a
+				display: inline-block
+				border-radius: 30px
+				height: 40px
+				line-height: 40px
+				padding-left: 17px
+				padding-right: 17px
+				background-color: $yellow-dark
+				font-weight: 900
+				font-size: 20px
+				color: #fff
+		img
+			border-radius: 30px
+			max-width: 100%
+			height: auto
+		.video_post
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			display: flex
+			align-items: center
+			justify-content: center
+			.open_video
+				display: flex
+				width: 100px
+				height: 100px
+				background-color: #fff
+				border-radius: 100%
+				align-items: inherit
+				justify-content: inherit
+				transition: $trs
+				&:hover
+					background-color: rgba(255, 255, 255, 0.5)
+				.video_icon
+					width: 48px
+					height: 48px
+					background: url('../svg/video.svg') center center no-repeat
+					display: block
+	.post_info
+		font-weight: 400
+		font-size: 18px
+		line-height: 28px
+		color: #c4c4c4
+		display: inline-block
+		margin-bottom: 7px
+		a
+			color: $pink-dark
+			text-decoration: underline
+			transition: $trs
+			&:hover
+				text-decoration: none
+				opacity: 0.7
+	h3
+		font-weight: 700
+		font-size: 34px
+		line-height: 38px
+		color: $blue-dark
+		text-transform: capitalize
+		padding-right: 30px
+		box-sizing: border-box
+		&:hover
+			color: $yellow-dark
+		a
+			color: inherit
+	p
+		margin-bottom: 30px
+		padding-right: 30px
+		box-sizing: border-box
+
+	.read_more_blog
+		font-weight: 900
+		font-size: 18px
+		color: $yellow-dark
+
+.alekids_pagination
+	width: 100%
+	display: flex
+	align-items: center
+	justify-content: space-between
+	margin-bottom: 100px
+	margin-top: 60px
+	.prev_posts, .next_posts
+		transition: $trs
+		&:hover
+			opacity: 0.7
+	.all_pages
+		font-weight: 900
+		font-size: 28px
+		line-height: 28px
+		a
+			color: $blue
+			&:hover
+				color: $pink-dark
+		span
+			color: $pink-dark
+		a, span
+			margin-left: 10px
+			margin-right: 10px

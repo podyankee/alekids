@@ -1,0 +1,11 @@
+<?php
+ale_demo_media::add_image_to_media_gallery('ale_about1',"http://alethemes.com/olins_base/media/cosushi/about1.jpg");
+ale_demo_media::add_image_to_media_gallery('ale_about2',"http://alethemes.com/olins_base/media/cosushi/about2.jpg");
+ale_demo_media::add_image_to_media_gallery('ale_about3',"http://alethemes.com/olins_base/media/cosushi/about3.png");
+ale_demo_media::add_image_to_media_gallery('ale_book',"http://alethemes.com/olins_base/media/cosushi/book.jpg");
+ale_demo_media::add_image_to_media_gallery('ale_Decor',"http://alethemes.com/olins_base/media/cosushi/Decor.png");
+ale_demo_media::add_image_to_media_gallery('ale_ic1',"http://alethemes.com/olins_base/media/cosushi/ic1.png");
+ale_demo_media::add_image_to_media_gallery('ale_ic2',"http://alethemes.com/olins_base/media/cosushi/ic2.png");
+ale_demo_media::add_image_to_media_gallery('ale_ic3',"http://alethemes.com/olins_base/media/cosushi/ic3.png");
+ale_demo_media::add_image_to_media_gallery('ale_ic4',"http://alethemes.com/olins_base/media/cosushi/ic4.png");
+ale_demo_media::add_image_to_media_gallery('ale_sliderdecor',"http://alethemes.com/olins_base/media/cosushi/slidedecor.png");

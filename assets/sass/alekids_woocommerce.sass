@@ -1,0 +1,797 @@
+@import "normalize.css"
+@import "helpers/vars"
+@import "helpers/mixins"
+@import "layout/general"
+
+.woocommerce
+	a.button
+		border-radius: 30px
+		background-color: #ffbebe
+		color: #fff
+		font-weight: 900
+		font-size: 18px
+		padding: 0 40px
+		height: 40px
+		line-height: 40px
+		display: inline-block
+		text-align: center
+		transition: background-color 0.3s ease-in-out
+	.alekids_shop_archive
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+	.shop_content
+		width: calc( 75% - 10px )
+		.alekids_pagination
+			margin-top: 80px
+	aside.sidebar
+		width: calc( 25% - 30px )
+		.alekids_search
+			background-color: #fff8b8
+			border-radius: 30px
+			box-sizing: border-box
+			width: 100%
+			height: 50px
+			display: flex
+			align-items: center
+			justify-content: center
+			padding-left: 30px
+			padding-right: 6px
+			input.searchinput
+				height: 30px
+				background-color: transparent
+				border: none
+				width: calc( 100% - 40px )
+				margin-bottom: 0
+				padding-left: 0
+				color: #304566
+				font-size: 16px
+				+placeholder
+					color: #304566
+	.top_shop_archive
+		margin-bottom: 40px
+		border-radius: 30px
+		background-color: #fefbf4
+		padding: 0 25px
+		min-height: 50px
+		display: flex
+		align-items: center
+		justify-content: space-between
+	.woocommerce-ordering, .woocommerce-result-count
+		margin-bottom: 0
+		float: none
+	select
+		font-size: 18px
+		color: #7d7d7d
+		border: none
+		background: transparent
+		min-height: 28px
+		line-height: 28px
+		-moz-appearance: none
+		-webkit-appearance: none
+		appearance: none
+		background-image: url('../svg/select.svg')
+		background-repeat: no-repeat
+		background-position-y: center
+		background-position-x: 97%
+		min-width: 235px
+		padding-right: 38px
+	.woocommerce-notices-wrapper
+		.woocommerce-message
+			margin-bottom: 40px
+			border-bottom-left-radius: 30px
+			border-bottom-right-radius: 30px
+			background-color: #fefbf4
+			border-top-color: #94edca
+			&::before
+				color: #94edca
+	.products
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+		flex-wrap: wrap
+		&.columns-2 .product
+			width: calc( 50% - 10px )
+		&.columns-3 .product
+			width: calc( 33.33333% - 13.33333px )
+			img
+				max-height: 235px
+				width: auto
+		&.columns-4 .product
+			width: calc( 25% - 15px )
+			img
+				max-height: 235px
+				width: auto
+		.product
+			width: 100%
+			margin-bottom: 20px
+			.product_item_holder
+				position: relative
+				background-color: #fefbf4
+				border-radius: 30px
+				padding: 20px
+				box-sizing: border-box
+				text-align: center
+				transition: all 0.3s ease-in-out
+				overflow: hidden
+				&:hover
+					.hover_content
+						left: 0
+				.hover_content
+					background-color: #ffbebe
+					text-align: center
+					color: #fff
+					position: absolute
+					top: 0
+					left: -100%
+					width: 100%
+					height: 100%
+					border-radius: 30px
+					padding: 20px
+					box-sizing: border-box
+					transition: all 0.3s ease-in-out
+					display: flex
+					flex-direction: column
+					align-items: center
+					justify-content: center
+					a
+						color: inherit
+						&:hover
+							color: #fff8b8
+					a.button
+						background-color: #fff
+						color: #ffbebe
+						&.loading::after
+							top: 0
+						&:hover
+							background-color: #fff8b8
+					.added_to_cart
+						font-size: 14px
+						display: block
+					h2
+						color: #fff
+						font-weight: 900
+						font-size: 20px
+						margin-bottom: 15px
+						transition: color 0.3s ease-in-out
+						&:hover
+							color: #fff8b8
+					span.price
+						display: block
+						margin-bottom: 20px
+						del
+							color: #fff
+							opacity: 1
+							.amount
+								color: #fff
+						.amount
+							color: #fff8b8
+					.woo_excerpt
+						padding-top: 20px
+						padding-bottom: 20px
+						margin: 20px 0
+						position: relative
+						&::before
+							content: ''
+							width: 100%
+							height: 5px
+							display: block
+							position: absolute
+							left: 0
+							top: 0
+							border-radius: 10px
+							overflow: hidden
+							background: url(../svg/hover-shop.svg) center center repeat-x
+						&::after
+							content: ''
+							width: 100%
+							height: 5px
+							display: block
+							position: absolute
+							left: 0
+							bottom: 0
+							border-radius: 10px
+							overflow: hidden
+							background: url(../svg/hover-shop.svg) center center repeat-x
+						p
+							margin-bottom: 0
+							text-align: center
+			img
+				margin-bottom: 17px
+			h2.woocommerce-loop-product__title
+				font-weight: 900
+				font-size: 20px
+				line-height: 26px
+				margin-bottom: 20px
+			.price
+				font-size: 0
+				.amount
+					font-weight: 900
+					font-size: 40px
+					line-height: 40px
+					color: #ffa1ac
+				ins
+					text-decoration: none
+					font-weight: 900
+				del
+					color: #c4c4c4
+					.amount
+						opacity: 1
+						color: #c4c4c4
+						font-size: 20px
+	span.onsale
+		border: 10px solid #fff
+		background-color: #b3d0fd
+		width: 72px
+		height: 72px
+		padding: 0
+		line-height: 72px
+		font-weight: 900
+		font-size: 18px
+		top: -30px
+		left: 50%
+		margin-left: -46px
+		text-transform: uppercase
+		transform: rotate(-22deg)
+		box-sizing: content-box
+	.alekids_shop_single
+		div.product
+			&.product-type-variable, &.product-type-grouped
+				p.price
+					font-size: 30px !important
+					flex-direction: column
+			.woocommerce-tabs
+				ul.tabs
+					margin: 0
+					padding: 0
+					height: 70px
+					width: 100%
+					background-color: #ffd3bd
+					border-radius: 40px
+					color: #fff
+					display: flex
+					align-items: center
+					justify-content: center
+					&::before
+						display: none
+					li
+						border: 0
+						background-color: transparent
+						padding: 0
+						margin: 0
+						color: #fff
+						border-radius: unset
+						transition: all 0.3s ease-in-out
+						&.active
+							a
+								svg
+									opacity: 1
+						&:hover
+							a
+								svg
+									opacity: 1
+						a
+							color: inherit
+							padding: 18px 40px
+							font-weight: 900
+							display: inline-block
+							background-color: transparent
+							svg
+								transition: all 0.3s ease-in-out
+								opacity: 0
+							&:hover
+								color: inherit
+								background-color: transparent
+						&::before, &::after
+							display: none
+						&.active
+							border: 0
+							background-color: transparent
+							padding: 0
+							margin: 0
+							color: #fff
+				.woocommerce-Tabs-panel
+					margin-left: 40px
+					margin-right: 40px
+					border: 2px dashed #ffd3bd
+					padding: 40px
+					box-sizing: border-box
+					border-bottom-right-radius: 30px
+					border-bottom-left-radius: 30px
+					border-top: 0
+					margin-bottom: 100px
+					p:last-child, table
+						margin-bottom: 0
+
+			.top_product
+				display: flex
+				align-items: flex-start
+				justify-content: space-between
+				margin-bottom: 50px
+				.left_content
+					display: flex
+					flex-wrap: wrap
+					align-items: flex-start
+					justify-content: flex-start
+					p.price
+						font-size: 50px
+						font-weight: 900
+						display: flex
+						flex-direction: column
+						margin-bottom: 45px
+						width: 120px
+						height: 120px
+						margin-right: 30px
+						border-radius: 100%
+						background-color: #b3d0fd
+						align-items: center
+						justify-content: center
+						color: #fff
+						order: -5
+						del
+							font-size: 18px
+							margin-bottom: 5px
+						ins
+							text-decoration: none
+							font-weight: 900
+					h1.product_title
+						width: calc(100% - 150px)
+						font-weight: 900
+						font-size: 40px
+						line-height: 46px
+						padding-top: 27px
+						position: relative
+						margin-bottom: 45px
+						order: -4
+						&::before
+							width: 100px
+							height: 5px
+							background-color: #ffd3bd
+							border-radius: 10px
+							content: ''
+							display: block
+							position: absolute
+							top: 0
+							left: 0
+					.woocommerce-product-details_short-description
+						width: 100%
+						margin-bottom: 40px
+						order: -3
+						p:last-child
+							margin-bottom: 0
+					.product_meta
+						width: 100%
+						order: -2
+						margin-bottom: 50px
+						> span
+							display: block
+							margin-bottom: 0
+							font-weight: 900
+							font-size: 18px
+							line-height: 38px
+							color: #304566
+							span, a
+								font-weight: 700
+								color: #ffa1ac
+							a
+								transition: all 0.3s ease-in-out
+								&:hover
+									color: #b3d0fd
+					.woocommerce-product-rating
+						order: -2
+						display: flex
+						align-items: center
+						justify-content: flex-start
+						margin-bottom: 0
+						.label
+							font-weight: 900
+							font-size: 18px
+							line-height: 38px
+							color: #304566
+						.woocommerce-review-link
+							color: inherit
+							transition: all 0.3s ease-in-out
+							&:hover
+								color: #b3d0fd
+						.star-rating
+							margin: 0 0 0 10px
+							font-size: 0.9em
+							&::before
+								color: #ffa1ac
+							span
+								color: #ffa1ac
+					form.cart
+						width: 100%
+						order: -1
+						.woocommerce-grouped-product-list
+							.item_holder
+								display: flex
+								flex-direction: column
+								.form_wrapper
+									margin-bottom: 20px
+									justify-content: flex-start
+									padding-right: 30px
+									box-sizing: border-box
+									.woocommerce-grouped-product-list-item__label
+										width: 100%
+										font-weight: 900
+										color: #fff
+										a
+											color: inherit
+											transition: opacity 0.3s ease-in-out
+											&:hover
+												opacity: 0.7
+									.woocommerce-grouped-product-list-item__price
+										font-weight: 900
+										color: #fff
+						.woocommerce-variation-price
+							font-weight: 900 !important
+							font-size: 28px !important
+							color: #ffa1ac !important
+							margin-bottom: 20px
+							span.price
+								font-size: inherit
+								color: inherit
+						.form_wrapper
+							display: inline-flex
+							align-items: center
+							justify-content: flex-start
+							background-color: #b3d0fd
+							border-radius: 40px
+							min-height: 70px
+							padding-right: 6px
+							.button
+								background-color: transparent
+								height: 60px
+								font-weight: 900
+								padding: unset
+							.quantity
+								padding-left: 24px
+								display: flex
+								align-items: center
+								justify-content: space-between
+								margin-right: 20px
+								input.qty
+									width: 60px
+									border: 0
+									background: transparent
+									font-weight: 900
+									font-size: 28px
+									line-height: 38px
+									height: 38px
+									color: #fff
+									font-family: inherit
+								span
+									font-weight: 900
+									font-size: 28px
+									line-height: 28px
+									color: #fff8b8
+									cursor: pointer
+					form
+						input::-webkit-outer-spin-button,
+						input::-webkit-inner-spin-button
+							-webkit-appearance: none
+						input[type="number"]
+							-moz-appearance: textfield
+						select
+							max-width: 100%
+							min-width: 250px
+							border: 2px dashed #ffd3bd
+							padding: 10px 20px
+							-webkit-box-sizing: border-box
+							box-sizing: border-box
+							font-size: 18px
+							border-radius: 30px
+							font-weight: 700
+							color: #304566
+							-webkit-appearance: none
+							-moz-appearance: none
+							appearance: none
+							background-color: transparent
+							background-image: url("../svg/select.svg")
+							background-repeat: no-repeat
+							background-position-y: center
+							background-position-x: 90%
+				.left_content, .right_content
+					width: calc( 50% - 45px )
+					float: none
+				.right_content
+					background-color: #fefbf4
+					border-radius: 30px
+					padding: 45px
+					box-sizing: border-box
+					position: relative
+					span.onsale
+						top: 5px
+				.right_content div.images
+					width: 100%
+					float: none
+					margin-bottom: 0
+.woocommerce table.shop_attributes tr:nth-child(even) td, .woocommerce table.shop_attributes tr:nth-child(even) th
+	background-color: #fefbf4
+.woocommerce table.shop_attributes th, .woocommerce table.shop_attributes td, .woocommerce table.shop_attributes
+	border-style: dashed !important
+
+.woocommerce
+	.related.products
+		display: block
+		text-align: center
+		margin-bottom: 100px
+		.product
+			margin-bottom: 0
+		>h2
+			margin-bottom: 45px
+			display: inline-block
+			font-weight: 900
+			font-size: 40px
+			line-height: 40px
+			position: relative
+			z-index: 0
+			&::before
+				content: ""
+				width: calc(100% + 20px)
+				height: 20px
+				border-radius: 20px
+				display: block
+				position: absolute
+				top: 100%
+				left: -10px
+				margin-top: -18px
+				background-color: #fff8b8
+				z-index: -1
+	#reviews #comments
+		margin-bottom: 100px
+		h2.woocommerce-Reviews-title
+			margin-bottom: 35px
+			display: inline-block
+			font-weight: 900
+			font-size: 30px
+			line-height: 30px
+			position: relative
+			z-index: 0
+			&::before
+				content: ""
+				width: calc(100% + 20px)
+				height: 15px
+				border-radius: 20px
+				display: block
+				position: absolute
+				top: 100%
+				left: -10px
+				margin-top: -15px
+				background-color: #fff8b8
+				z-index: -1
+		li.review
+			list-style: none
+			background-color: #fefbf4 !important
+			border-radius: 30px
+			border: none
+			padding: 30px
+			box-sizing: border-box
+			.comment_container
+				display: flex
+				align-items: flex-start
+				img.avatar
+					position: relative
+					top: unset
+					left: unset
+					width: auto
+					height: auto
+					padding: 0
+					border-radius: 100%
+					border: 10px solid #fff8b8
+				.star-rating
+					font-size: 0.9em
+					color: #ffa1ac
+					&::before
+						color: #ffa1ac
+				p.meta
+					font-size: 18px
+				.description p
+					line-height: 28px
+				.description p:last-child
+					margin-bottom: 0
+				.comment-text
+					border: 0
+					padding: 0
+					margin: 0
+					margin-left: 30px
+	#review_form #respond
+		background-color: #fefbf4
+		border-radius: 30px
+		padding: 40px
+		box-sizing: border-box
+		.comment-form-cookies-consent
+			margin-bottom: 20px
+		.form-submit
+			margin-bottom: 0
+			margin-left: 125px
+		.comment-notes
+			margin-bottom: 30px
+		.comment-form-rating, .comment-form-comment, .comment-form-author, .comment-form-email
+			display: flex
+			align-items: center
+			justify-content: flex-start
+			margin-bottom: 20px
+			input
+				margin-bottom: 0
+			textarea
+				height: 100px
+				margin-bottom: 0
+			p.stars
+				margin-bottom: 0
+				color: #ffa1ac
+			label
+				color: #304566
+				font-weight: 900
+				font-size: 18px
+				margin-right: 10px
+				display: block
+				white-space: nowrap
+				min-width: 115px
+		.comment-reply-title
+			margin-bottom: 45px
+			display: inline-block
+			font-weight: 900
+			font-size: 40px
+			line-height: 40px
+			position: relative
+			z-index: 0
+			color: #304566
+			&::before
+				content: ""
+				width: calc(100% + 20px)
+				height: 20px
+				border-radius: 20px
+				display: block
+				position: absolute
+				top: 100%
+				left: -10px
+				margin-top: -18px
+				background-color: #fff8b8
+				z-index: -1
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button
+	background-color: #b3d0fd
+	border-radius: 30px
+	font-weight: 900
+	font-size: 18px
+	color: #fff
+	padding: 0.618em 2em
+	&.alt
+		background-color: #b3d0fd
+		&:hover
+			color: #fff
+			background-color: #ffa1ac
+	&:hover
+		color: #fff
+		background-color: #ffa1ac
+
+.woocommerce div.product form.cart
+	.variations
+		margin-bottom: 40px
+		.item_line
+			display: flex
+			align-items: center
+			justify-content: flex-start
+			&:not(:last-child)
+				margin-bottom: 20px
+			.value
+				margin-left: 15px
+				display: flex
+				align-items: center
+				a
+					color: #ffa1ac
+					transition: color 0.3s ease-in-out
+					&:hover
+						color: #b3d0fd
+		label
+			font-weight: 900
+			font-size: 18px
+			line-height: 38px
+			color: #304566
+.woocommerce-error, .woocommerce-info, .woocommerce-message
+	background-color: #fefbf4
+
+.woocommerce
+	.shop_table
+		.product-quantity
+			.quantity
+				display: inline-flex
+				background-color: #b3d0fd
+				border-radius: 40px
+				min-height: 70px
+				align-items: center
+				justify-content: center
+.wc-block-product-top-rated, .wc-block-rating-filter, .widget_recently_viewed_products, .widget_products, .widget_shopping_cart, .widget_rating_filter, .widget_top_rated_products
+	ul
+		margin-left: 0
+		li
+			list-style: none !important
+			&::before
+				display: none !important
+
+.widget_price_filter
+	.price_slider_amount
+		display: flex
+		align-items: center
+		justify-content: space-between
+		.button
+			order: 1
+	.price_slider
+		background-color: #b3d0fd !important
+		border-radius: 0 !important
+		height: 30px !important
+		box-sizing: border-box
+		margin: 0 20px !important
+		margin-bottom: 15px !important
+		position: relative
+		&::before
+			position: absolute
+			content: ''
+			width: 20px
+			height: 30px
+			background-color: #b3d0fd
+			border-top-left-radius: 30px
+			border-bottom-left-radius: 30px
+			left: -20px
+			top: 0
+		&::after
+			position: absolute
+			content: ''
+			width: 20px
+			height: 30px
+			background-color: #b3d0fd
+			border-top-right-radius: 30px
+			border-bottom-right-radius: 30px
+			right: -20px
+			top: 0
+		.ui-slider-range
+			background-color: #fff8b8 !important
+			height: 6px !important
+			top: 12px !important
+		.ui-slider-handle
+			width: 15px !important
+			height: 15px !important
+			background-color: #7292de !important
+			border-radius: 100% !important
+			top: 7px !important
+.product_list_widget, .wc-block-grid__products, .widget_rating_filter
+	li
+		border: 0
+		background: #fefbf4
+		padding: 20px !important
+		padding-bottom: 10px !important
+		box-sizing: border-box
+		border-radius: 30px
+		margin-bottom: 20px !important
+		font-weight: 900
+		color: #304566
+		font-size: 20px
+		a
+			font-weight: inherit
+			color: inherit
+			font-size: inherit
+		.product-title
+			margin-bottom: 10px
+			display: block
+		.amount
+			color: #b3d0fd
+			font-size: 20px
+			display: inline-block
+			padding-bottom: 10px
+		del, bdi, ins
+			color: #b3d0fd
+		.star-rating
+			margin-bottom: 10px
+			color: #ffa1ac
+			font-size: 0.6em
+			&::before
+				color: #ffa1ac
+			&:hover
+				opacity: 0.8
+		img
+			width: 60px !important
+			float: left !important
+			margin-right: 20px !important
+			margin-left: 0
+			padding-bottom: 10px

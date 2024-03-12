@@ -1,0 +1,68 @@
+<div class="book_form">
+<div class="left_part">
+[select persons class:cosushiselect "1 Person" "2 Persons" "3 Persons" "4 Persons" "5 Persons" "6 Persons" "7 Persons" "8 Persons" "9 Persons" "10 Persons"]
+
+[select times class:cosushiselect "5:00 pm" "6:00 pm" "7:00 pm" "8:00 pm" "9:00 pm" "10:00 pm" "11:00 pm" ]
+
+[text* date placeholder "Date*"]
+</div>
+<div class="right_part">
+[text* your-name placeholder "Your name*"]
+
+[email* your-phone placeholder "Your phone*"]
+
+[email* your-email placeholder "Your e-mail*"]
+</div>
+</div>
+<div class="submitcosushi"><div class="smalldecorbut"></div> [submit "Submit"] <div class="smalldecorbut"></div></div>
+1
+[_site_title] "[your-subject]"
+[_site_title] <alexandr.sochirca@gmail.com>
+[_site_admin_email]
+From: [your-name] <[your-email]>
+Subject: [your-subject]
+
+Message Body:
+[your-message]
+
+-- 
+This e-mail was sent from a contact form on [_site_title] ([_site_url])
+Reply-To: [your-email]
+
+
+
+
+[_site_title] "[your-subject]"
+[_site_title] <alexandr.sochirca@gmail.com>
+[your-email]
+Message Body:
+[your-message]
+
+-- 
+This e-mail was sent from a contact form on [_site_title] ([_site_url])
+Reply-To: [_site_admin_email]
+
+
+
+Thank you for your message. It has been sent.
+There was an error trying to send your message. Please try again later.
+One or more fields have an error. Please check and try again.
+There was an error trying to send your message. Please try again later.
+You must accept the terms and conditions before sending your message.
+The field is required.
+The field is too long.
+The field is too short.
+The date format is incorrect.
+The date is before the earliest one allowed.
+The date is after the latest one allowed.
+There was an unknown error uploading the file.
+You are not allowed to upload files of this type.
+The file is too big.
+There was an error uploading the file.
+The number format is invalid.
+The number is smaller than the minimum allowed.
+The number is larger than the maximum allowed.
+The answer to the quiz is incorrect.
+The e-mail address entered is invalid.
+The URL is invalid.
+The telephone number is invalid.

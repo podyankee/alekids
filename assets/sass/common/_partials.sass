@@ -1,0 +1,116 @@
+a.alekids_button
+	color: #fff
+	&:hover
+		color: #fff
+.alekids_button
+	background-color: $blue
+	border-radius: 30px
+	color: #fff
+	position: relative
+	display: inline-block
+	font-style: normal
+	font-weight: 900
+	font-size: 18px
+	padding: 18px 40px
+	transition: $trs
+	&:hover
+		background-color: $pink-light
+		color: #fff
+
+		.alekids_dashed
+			animation-play-state: running
+	.container
+		display: flex
+		align-items: center
+		justify-content: center
+		margin: auto
+	.alekids_dashed
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		stroke-width: 2
+		stroke-dasharray: 6, 6
+		stroke-dashoffset: 0
+		stroke-linecap: round
+		fill: none
+		stroke: #fff
+		animation: dashed_moving 20s linear infinite both
+		animation-play-state: paused
+
+@keyframes dashed_moving
+	100%
+		stroke-dashoffset: -1000
+
+.alekids_socialbox
+	position: relative
+	z-index: 0
+	background-color: $blue
+	padding: 40px
+	color: #fff
+	border-radius: 30px
+	&:hover
+		.alekids_socialbox_dashed
+			animation-play-state: running
+	.social_content
+		display: flex
+		align-items: center
+		justify-content: flex-start
+		.image_holder
+			margin-right: 15px
+			min-width: 64px
+		.text_holder
+			h6
+				color: inherit
+				font-weight: 900
+				font-size: 20px
+				margin-bottom: 5px
+			p
+				color: inherit
+				margin-bottom: 0
+				font-size: 18px
+				line-height: 24px
+
+.alekids_counter
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-wrap: wrap
+	.icon_counter
+		+dem(80px)
+		display: block
+		&.icon_one
+			background: url('../svg/counter-1.svg')
+		&.icon_two
+			background: url('../svg/counter-2.svg')
+		&.icon_three
+			background: url('../svg/counter-3.svg')
+		&.icon_four
+			background: url('../svg/counter-4.svg')
+	.image_container
+		width: 100%
+		min-height: 80px
+		margin-bottom: 30px
+		display: flex
+		align-items: center
+		justify-content: center
+.alekids_text_color
+	width: 100%
+	text-align: center
+	display: block
+	margin-bottom: 20px
+	font-weight: 900
+	font-size: 22px
+	line-height: 22px
+	color: #7d7d7d
+.alekids_number
+	visibility: hidden
+.alekids_number_color
+	width: 100%
+	text-align: center
+	display: block
+	font-weight: 900
+	font-size: 50px
+	line-height: 50px
+	color: $yellow-light
