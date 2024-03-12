@@ -10,7 +10,7 @@
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 
-	<?php //get_template_part('partials/preloader'); ?>
+	<?php get_template_part('partials/preloader'); ?>
 
 	<header class="top">
 		<div class="wrapper">
