@@ -6,6 +6,9 @@ $post_classes = 'alekids_blog_preview';
 if (!empty($args['post_class'])) {
 	$post_classes .= ' '.$args['post_class'];
 }
+if(!get_the_post_thumbnail( get_the_ID() )) {
+	$post_classes .= ' no_featured_image';
+}
 ?>
 
 <article <?php post_class($post_classes); ?> id="post-<?php the_ID()?>" data-post-id="<?php the_ID()?>">

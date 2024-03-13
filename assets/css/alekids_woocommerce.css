@@ -509,11 +509,14 @@ hr {
   display: table !important;
 }
 .story .wp-block-image figcaption {
-  color: #888;
-  font-size: 12px;
+  color: #304566;
+  font-size: 16px;
   margin: 0;
-  background: #f0f0f0;
-  padding: 5px;
+  background: #fefbf4;
+  padding: 15px;
+}
+.story .wp-block-image figcaption a {
+  text-decoration: underline;
 }
 .story ul {
   list-style: none;
@@ -616,6 +619,9 @@ hr {
 }
 .story .wp-block-button {
   margin-bottom: 20px;
+}
+.story .wp-block-cover-text strong {
+  color: inherit;
 }
 .story .wp-caption {
   line-height: 1.5;

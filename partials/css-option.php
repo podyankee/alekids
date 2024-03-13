@@ -797,7 +797,7 @@ if(ale_get_option('workpagebg')) {
 }
 
 ?><?php if($ale_font_one) {
-	echo '.font_one {';
+	echo '.font_one, .alekids_preloader_content .alekids_content p {';
 	$font_one=str_replace ('+', ' ', $ale_font_one);
 	echo "font-family:".$font_one.";";
 	echo '}';

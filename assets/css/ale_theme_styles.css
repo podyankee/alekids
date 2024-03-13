@@ -509,11 +509,14 @@ hr {
   display: table !important;
 }
 .story .wp-block-image figcaption {
-  color: #888;
-  font-size: 12px;
+  color: #304566;
+  font-size: 16px;
   margin: 0;
-  background: #f0f0f0;
-  padding: 5px;
+  background: #fefbf4;
+  padding: 15px;
+}
+.story .wp-block-image figcaption a {
+  text-decoration: underline;
 }
 .story ul {
   list-style: none;
@@ -616,6 +619,9 @@ hr {
 }
 .story .wp-block-button {
   margin-bottom: 20px;
+}
+.story .wp-block-cover-text strong {
+  color: inherit;
 }
 .story .wp-caption {
   line-height: 1.5;
@@ -1283,8 +1289,321 @@ a.alekids_button:hover {
   font-size: 50px;
   line-height: 50px;
   color: #fff8b8;
+  /* Preloader */
 }
 
+.alekids_preloader_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f5f1e9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+}
+.alekids_preloader_content .alekids_content {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.alekids_preloader_content .alekids_content .planet {
+  width: 65%;
+  height: 65%;
+  background-color: #b3d0fd;
+  border-radius: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-box-shadow: inset 2px -10px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 2px -10px 0px rgba(0, 0, 0, 0.1);
+  -webkit-animation: alekids_planet 5s ease infinite alternate;
+          animation: alekids_planet 5s ease infinite alternate;
+  /* planet ring */
+  /* to cover the back of the ring */
+  /* planet spots */
+}
+.alekids_preloader_content .alekids_content .planet .ring {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  background-color: #fff8b8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform-origin: 33% center;
+          transform-origin: 33% center;
+  -webkit-box-shadow: 2px -10px 0px rgba(0, 0, 0, 0.1), inset -5px -10px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px -10px 0px rgba(0, 0, 0, 0.1), inset -5px -10px 0px rgba(0, 0, 0, 0.1);
+  -webkit-animation: alekids_ring 3s ease infinite;
+          animation: alekids_ring 3s ease infinite;
+  /* small ball */
+  /* inner ring */
+}
+.alekids_preloader_content .alekids_content .planet .ring:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: #ffd3bd;
+  z-index: 2;
+  left: -5px;
+  -webkit-box-shadow: inset -3px 3px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: inset -3px 3px 0px rgba(0, 0, 0, 0.2);
+}
+.alekids_preloader_content .alekids_content .planet .ring:after {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  border-radius: 100%;
+  background-color: #ffd3bd;
+  -webkit-box-shadow: inset 2px -10px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 2px -10px 0px rgba(0, 0, 0, 0.1);
+}
+.alekids_preloader_content .alekids_content .planet .cover-ring {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  border-bottom-left-radius: 80%;
+  border-bottom-right-radius: 80%;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  -webkit-transform: translate(0px, -17px);
+          transform: translate(0px, -17px);
+  background-color: #b3d0fd;
+  z-index: 2;
+  -webkit-box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.1);
+}
+.alekids_preloader_content .alekids_content .planet .spots {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  z-index: 2;
+}
+.alekids_preloader_content .alekids_content .planet .spots span {
+  width: 30px;
+  height: 30px;
+  background-color: #7292de;
+  position: absolute;
+  border-radius: 100%;
+  -webkit-box-shadow: inset -2px 3px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: inset -2px 3px 0px rgba(0, 0, 0, 0.3);
+  -webkit-animation: alekids_dots 5s ease infinite alternate;
+          animation: alekids_dots 5s ease infinite alternate;
+}
+.alekids_preloader_content .alekids_content .planet .spots span:nth-child(1) {
+  top: 25px;
+  right: 55px;
+}
+.alekids_preloader_content .alekids_content .planet .spots span:nth-child(2) {
+  top: 35px;
+  left: 45px;
+  width: 17px;
+  height: 17px;
+}
+.alekids_preloader_content .alekids_content .planet .spots span:nth-child(3) {
+  top: 73px;
+  left: 21px;
+  width: 24px;
+  height: 24px;
+}
+.alekids_preloader_content .alekids_content .planet .spots span:nth-child(4) {
+  top: 83px;
+  left: 91px;
+  width: 39px;
+  height: 39px;
+}
+.alekids_preloader_content .alekids_content .planet .spots span:nth-child(5) {
+  top: 163px;
+  left: 77px;
+  width: 16px;
+  height: 16px;
+}
+.alekids_preloader_content .alekids_content .planet .spots span:nth-child(6) {
+  top: 160px;
+  left: 125px;
+  width: 11px;
+  height: 11px;
+}
+.alekids_preloader_content .alekids_content .planet .spots span:nth-child(7) {
+  top: 91px;
+  left: 151px;
+  width: 16px;
+  height: 16px;
+}
+.alekids_preloader_content .alekids_content p {
+  color: #304566;
+  font-size: 18px;
+  z-index: 2;
+  position: absolute;
+  bottom: -40px;
+  -webkit-animation: alekids_text 4s ease infinite;
+          animation: alekids_text 4s ease infinite;
+  width: 100px;
+  text-align: center;
+}
+
+@-webkit-keyframes alekids_dots {
+  0% {
+    -webkit-box-shadow: inset -3px 3px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: inset -3px 3px 0px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    -webkit-box-shadow: inset 3px 3px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: inset 3px 3px 0px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@keyframes alekids_dots {
+  0% {
+    -webkit-box-shadow: inset -3px 3px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: inset -3px 3px 0px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    -webkit-box-shadow: inset 3px 3px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: inset 3px 3px 0px rgba(0, 0, 0, 0.3);
+  }
+}
+@-webkit-keyframes alekids_ring {
+  0% {
+    -webkit-transform: rotateX(110deg) rotateZ(0deg) translate(-50px, 5px);
+            transform: rotateX(110deg) rotateZ(0deg) translate(-50px, 5px);
+  }
+  100% {
+    -webkit-transform: rotateX(110deg) rotateZ(360deg) translate(-50px, 5px);
+            transform: rotateX(110deg) rotateZ(360deg) translate(-50px, 5px);
+  }
+}
+@keyframes alekids_ring {
+  0% {
+    -webkit-transform: rotateX(110deg) rotateZ(0deg) translate(-50px, 5px);
+            transform: rotateX(110deg) rotateZ(0deg) translate(-50px, 5px);
+  }
+  100% {
+    -webkit-transform: rotateX(110deg) rotateZ(360deg) translate(-50px, 5px);
+            transform: rotateX(110deg) rotateZ(360deg) translate(-50px, 5px);
+  }
+}
+@-webkit-keyframes alekids_planet {
+  0% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+}
+@keyframes alekids_planet {
+  0% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+}
+@-webkit-keyframes alekids_text {
+  0% {
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+    letter-spacing: 0px;
+    color: #bacbd9;
+  }
+  25% {
+    letter-spacing: 3px;
+    color: #304566;
+  }
+  50% {
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+    letter-spacing: 0px;
+    color: #bacbd9;
+  }
+  75% {
+    letter-spacing: 3px;
+    color: #304566;
+  }
+  100% {
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+    letter-spacing: 0px;
+    color: #bacbd9;
+  }
+}
+@keyframes alekids_text {
+  0% {
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+    letter-spacing: 0px;
+    color: #bacbd9;
+  }
+  25% {
+    letter-spacing: 3px;
+    color: #304566;
+  }
+  50% {
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+    letter-spacing: 0px;
+    color: #bacbd9;
+  }
+  75% {
+    letter-spacing: 3px;
+    color: #304566;
+  }
+  100% {
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+    letter-spacing: 0px;
+    color: #bacbd9;
+  }
+}
 header.top .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2500,6 +2819,8 @@ nav ul.menu-header > li > a::before {
   position: absolute;
   top: 20px;
   right: 20px;
+  font-size: 0;
+  text-align: right;
 }
 .alekids_blog_preview .featured_image span.category a {
   display: inline-block;
@@ -2511,7 +2832,10 @@ nav ul.menu-header > li > a::before {
   background-color: #f5c956;
   font-weight: 900;
   font-size: 20px;
+  margin-left: 10px;
+  margin-bottom: 10px;
   color: #fff;
+  display: inline-block;
 }
 .alekids_blog_preview .featured_image img {
   border-radius: 30px;
@@ -2644,6 +2968,32 @@ nav ul.menu-header > li > a::before {
 .alekids_pagination .all_pages a, .alekids_pagination .all_pages span {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+article.sticky {
+  border: 2px dashed #b3d0fd;
+  background-color: #fefbf4;
+  border-radius: 30px;
+  padding: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+article.no_featured_image {
+  background-color: #f0f6ff;
+  border-radius: 30px;
+  padding: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+article.no_featured_image:nth-child(2n) {
+  background-color: #fff5f0;
+}
+article.no_featured_image:nth-child(3n) {
+  background-color: #f2fff0;
+}
+article.no_featured_image:nth-child(4n) {
+  background-color: #fdf0ff;
 }
 
 .alekids_post_gallery, .alekids_gallery_slider {

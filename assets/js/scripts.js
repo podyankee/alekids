@@ -14,6 +14,16 @@ jQuery(function ($) {
 		}
 	});
 
+	//Preloader
+
+	if ($('.alekids_preloader_content').length) {
+		$(document).ready(function () {
+			$('.alekids_preloader_content').fadeOut('1000', function () {
+				$(this).remove();
+			});
+		});
+	}
+
 	//Scroll to top
 
 	if ($('.alekids_scroll_top').length) {
