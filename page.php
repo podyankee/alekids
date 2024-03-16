@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="wrapper">
+<div class="wrapper alekids_page_template">
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 	<?php get_template_part('partials/pagehead')?>

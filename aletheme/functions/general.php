@@ -929,7 +929,7 @@ function ale_trim_excerpt($length) {
     global $post;
     $explicit_excerpt = $post->post_excerpt;
     if ( '' == $explicit_excerpt ) {
-        $text = get_the_content('');
+        $text = get_the_excerpt('');
         $text = apply_filters('the_content', $text);
         $text = str_replace(']]>', ']]>', $text);
     }

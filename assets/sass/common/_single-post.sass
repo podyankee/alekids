@@ -8,12 +8,15 @@
 		.featured_image
 			position: relative
 			margin-bottom: 24px
+			display: inline-block
 			img
 				border-radius: 30px
 			span.category
 				position: absolute
 				top: 20px
 				right: 20px
+				font-size: 0
+				text-align: right
 				a
 					display: inline-block
 					border-radius: 30px
@@ -25,6 +28,8 @@
 					font-weight: 900
 					font-size: 20px
 					color: #fff
+					margin-left: 10px
+					margin-bottom: 10px
 			.video_post
 				position: absolute
 				top: 0
@@ -55,7 +60,7 @@
 			font-size: 18px
 			line-height: 28px
 			color: #c4c4c4
-			display: inline-block
+			display: block
 			margin-bottom: 7px
 			a
 				color: $pink-dark
@@ -64,7 +69,14 @@
 				&:hover
 					text-decoration: none
 					opacity: 0.7
-		h2
+			.post_excerpt
+				margin-bottom: 30px
+				margin-right: 30px
+				box-sizing: border-box
+				p:last-child()
+					margin-bottom: 0
+
+		h2.post_title
 			font-weight: 900
 			font-size: 40px
 			line-height: 1
@@ -72,5 +84,11 @@
 			text-transform: capitalize
 			box-sizing: border-box
 			margin-bottom: 30px
+			word-break: break-word
 	aside.sidebar
 		width: calc( 25% - 30px )
+.wp-block-quote.is-style-large, .wp-block-quote.is-large
+	padding-left: 120px
+
+.wp-block-video, .wp-block-audio, .wp-block-embed, .wp-audio-shortcode
+	margin-bottom: 40px

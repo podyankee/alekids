@@ -30,8 +30,12 @@
 </div>
 <?php } ?>
 
-<span class="post_info"><?php esc_html_e('By', 'alekids');?> <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php echo esc_attr( get_the_author() ); ?>"><?php the_author(); ?></a>//osted on <?php echo '<a href="'.esc_attr(get_day_link($archive_year, $archive_month, $archive_day)).'">' .get_the_date(). '</a>'; ?></span>
-<h2><?php the_title(); ?></h3>
+<span class="post_info"><?php esc_html_e('By', 'alekids');?> <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php echo esc_attr( get_the_author() ); ?>"><?php the_author(); ?></a>//osted on <?php echo '<a href="'.esc_attr(get_day_link($archive_year, $archive_month, $archive_day)).'">' .get_the_date(). '</a>'; ?>.
+	<?php if(!get_the_post_thumbnail()) { ?>
+	<?php esc_html_e('Posted in: ') ?><?php the_category(', '); ?>
+	<?php } ?>
+</span>
+<h2 class="post_title"><?php the_title(); ?></h3>
 
 	<?php the_content(); ?>
 

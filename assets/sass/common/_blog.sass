@@ -1,3 +1,6 @@
+.alekids_page_template
+	margin-bottom: 100px
+
 .posts_grid
 	display: flex
 	align-items: flex-start
@@ -42,6 +45,7 @@
 	.featured_image
 		margin-bottom: 24px
 		position: relative
+		display: inline-block
 		.featured_image_holder
 			overflow: hidden
 			border-radius: 30px
@@ -97,7 +101,7 @@
 				transition: $trs
 				&:hover
 					background-color: rgba(255, 255, 255, 0.5)
-				.video_icon
+				.video_icon.post
 					width: 48px
 					height: 48px
 					background: url('../svg/video.svg') center center no-repeat
@@ -107,7 +111,7 @@
 		font-size: 18px
 		line-height: 28px
 		color: #c4c4c4
-		display: inline-block
+		display: block
 		margin-bottom: 7px
 		a
 			color: $pink-dark
@@ -124,6 +128,7 @@
 		text-transform: capitalize
 		padding-right: 30px
 		box-sizing: border-box
+		word-break: break-word
 		&:hover
 			color: $yellow-dark
 		a
@@ -168,6 +173,9 @@ article.sticky
 	border-radius: 30px
 	padding: 30px
 	box-sizing: border-box
+article.format-gallery
+	.featured_image
+		display: block !important
 article.no_featured_image
 	background-color: #f0f6ff
 	border-radius: 30px

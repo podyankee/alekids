@@ -36,17 +36,38 @@ if(!get_the_post_thumbnail( get_the_ID() )) {
 				}
 			} 
 		?>
-		<span class="category font_one"><?php the_category(' '); ?></span>
+		<span class="category font_one">
+			<?php
+			$alekids_categories =	get_the_category();
+			if (!empty($alekids_categories)) {
+				$i = 0;
+				foreach($alekids_categories as $cat) {
+					echo '<a href="'. esc_url(get_category_link($cat->term_id)).'" rel="">'.esc_html($cat->name).'</a>';
+					$i++;
+					if ($i == 5) break;
+				}
+			}
+			?>
+		</span>
 	</div>
 	<?php } ?>
-	<span class="post_info"><?php esc_html_e('By', 'alekids');?> <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php echo esc_attr( get_the_author() ); ?>"><?php the_author(); ?></a>//osted on <?php echo '<a href="'.esc_attr(get_day_link($archive_year, $archive_month, $archive_day)).'">' .get_the_date(). '</a>'; ?></span>
+	<span class="post_info"><?php esc_html_e('By', 'alekids');?> <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php echo esc_attr( get_the_author() ); ?>"><?php the_author(); ?></a>Posted on <?php echo '<a href="'.esc_attr(get_day_link($archive_year, $archive_month, $archive_day)).'">' .get_the_date(). '</a>'; ?>.
+
+		<?php if(!get_the_post_thumbnail()) { ?>
+		<?php esc_html_e('Posted in: ') ?><?php the_category(', '); ?>
+		<?php } ?>
+	</span>
+
 	<h3><a href="<?php echo esc_url(the_permalink()); ?>"><?php the_title(); ?></a></h3>
-	<?php 
-	if (!empty($args['post_class']) and $args['post_class'] == 'bigpost') {
-		echo wp_kses_post(ale_trim_excerpt(41)); 
-	} else {
-		echo wp_kses_post(ale_trim_excerpt(23)); 
-	}
-	?>
+
+	<div class="post_excerpt">
+		<?php 
+				if (!empty($args['post_class']) and $args['post_class'] == 'bigpost') {
+					echo wp_kses_post(ale_trim_excerpt(41)); 
+				} else {
+					echo wp_kses_post(ale_trim_excerpt(23)); 
+				}
+		?>
+	</div>
 	<a class="read_more_blog font_one" href="<?php echo esc_url(the_permalink()); ?>"><?php esc_html_e('Read More','alekids'); ?></a>
 </article>

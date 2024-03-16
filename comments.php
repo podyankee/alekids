@@ -11,7 +11,7 @@ if ( post_password_required() ) {
     $req = get_option( 'require_name_email' );
 ?>
 <!-- Comments -->
-<div class="comments" id="comments">
+<div class="comments story" id="comments">
 	<?php if (have_comments()) : ?>
 	<div class="comments_container cf">
 		<div class="comments_name cf">

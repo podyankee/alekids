@@ -102,6 +102,8 @@ nav
 	list-style: none
 :focus
 	outline: 0
+iframe
+	max-width: 100%
 img
 	vertical-align: middle
 	outline: 0
@@ -219,7 +221,8 @@ a
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"]
+input[type="submit"],
+.wp-block-search .wp-block-search__button
 	cursor: pointer
 	min-height: 50px
 	-webkit-appearance: button
@@ -231,6 +234,52 @@ input[type="submit"]
 	letter-spacing: 1px
 	border-radius: 30px
 	border: 0
+.story .wp-block-latest-comments
+	margin: 0
+	margin-left: 40px
+	&.has-avatars
+		margin-left: 0
+	a
+		color: $pink-dark
+	li
+		margin-bottom: 20px
+		background-color: #fefbf4
+		padding: 30px
+		box-sizing: border-box
+		border-radius: 30px
+		p:last-child
+			margin-bottom: 0
+		.wp-block-latest-comments__comment-date
+			float: right
+.wp-block-search,
+.wp-block-archives-dropdown,
+.wp-block-media-text,
+.wp-block-categories,
+.wp-block-group.has-background
+.wp-block-verse
+	margin-bottom: 40px
+
+.wp-block-group.has-background
+	padding: 30px
+	box-sizing: border-box
+	.wp-block-group__inner-container p:last-child
+		margin-bottom: 0
+
+.wp-block-search__inside-wrapper
+	display: flex
+	align-items: center
+	justify-content: space-between
+	.wp-block-search__input
+		margin-bottom: 0
+		margin-right: 5px
+		height: 50px
+		border-color: $blue
+		border-radius: 30px
+.wp-block-search__label
+	display: block
+	margin-bottom: 10px
+	color: #304566
+	font-weight: 900
 
 .alekids_contact_form .alekids_button, .cart .alekids_button
 	position: relative
@@ -252,7 +301,8 @@ input[type="submit"]
 		min-width: 130px
 		&:hover
 			background-color: transparent
-
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd)
+	background-color: #fefbf4
 .alekids_contact_form .alekids_button
 	min-width: 146px
 
@@ -340,6 +390,23 @@ hr
 	padding: 0
 .story
 	line-height: 1.5
+	.post-password-form
+		padding: 30px
+		box-sizing: border-box
+		border-radius: 30px
+		background-color: #fefbf4
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+		margin-bottom: 40px
+		input[type="password"]
+			margin-top: 20px
+		p
+			text-align: center
+
+	.wp-block-search
+		margin-bottom: 40px
 	.wp-block-image
 		margin-bottom: 2em
 		figure
@@ -390,7 +457,7 @@ hr
 		font-size: inherit
 		margin-bottom: 2.2em
 	pre
-		background: #f2f2f2
+		background: #fefbf4
 		padding: 20px
 		display: block
 		margin: 10px 15px 10px 0
@@ -405,25 +472,29 @@ hr
 	abbr
 		text-transform: uppercase
 	dl
+		font-size: inherit
 		background: #ffffff
-		padding: 20px
-		border: 1px solid #f2f2f2
 		display: block
-		margin-bottom: 25px
 		box-sizing: border-box
 		dt
-			min-width: 150px
+			min-width: 180px
 			float: left
-			font-size: 14px
-			line-height: 20px
-			color: #000000
+			font-size: inherit
+			line-height: inherit
+			color: $blue-dark
 			font-weight: bold
 			letter-spacing: 0.005em
 			margin-bottom: 20px
 		dd
 			margin-left: 160px
 			margin-bottom: 20px
-			line-height: 20px
+			line-height: inherit
+	code
+		padding: 10px
+		box-sizing: border-box
+		background-color: #fefbf4
+		display: inline-block
+		border: 2px dashed $pink-light
 	.wp-block-cover
 		margin-bottom: 2em
 		&.aligncenter
@@ -436,6 +507,29 @@ hr
 	.wp-block-cover-text
 		strong
 			color: inherit
+	.wp-block-button__link
+		color: #fff
+	.wp-block-button.is-style-squared
+		.wp-block-button__link
+			border-radius: 0
+	.wp-block-gallery
+		.blocks-gallery-caption
+			margin-bottom: 2.2em
+		ul, li
+			margin: 0
+			list-style: none !important
+		ul
+			margin-bottom: 2em
+		li
+			padding: 0
+			margin-bottom: 1em
+			margin-right: 1em
+			&::before
+				display: none
+	.blocks-gallery-grid .blocks-gallery-image figcaption, .wp-block-gallery .blocks-gallery-item figcaption
+		line-height: 1.2em
+	.wp-block-media-text
+		margin-bottom: 2.2em
 	.wp-caption
 		line-height: 1.5
 		margin-bottom: 2em
@@ -446,9 +540,13 @@ hr
 			font-size: 10px
 		p
 			&.wp-caption-text
-				color: #888
-				font-size: 12px
+				color: $blue-dark
+				font-size: inherit
+				line-height: inherit
+				padding: 10px
 				margin: 0
+				a
+					text-decoration: underline
 
 	.wp-smiley
 		margin: 0
@@ -466,18 +564,22 @@ hr
 		th
 			color: #304566
 			background-color: #fefbf4
-			letter-spacing: 0.05em
+		caption
+			background-color: #b3d0fd
+			color: #fff
+			font-weight: 700
+			padding: 7px 0
 		a
 			text-decoration: underline !important#000
 		td, th
 			padding: 10px 15px
-			border: 1px solid #f2f2d2
+			border: 1px solid #fefbf4
 	.tagsphar
 		clear: both
 	span
 		&.post-page-numbers
 			&.current
-				background-color: #000
+				background-color: $pink-dark
 				color: #FFF
 
 .story ul ul,
@@ -542,27 +644,30 @@ hr
 .story img.alignright,
 .story img.aligncenter
 	margin-bottom: 2em
-.story table td,
+.story table,
 .story table th
 	padding: 20px 25px
 	border: 1px solid #f2f2f2
 .story .tagsphar a,
 .story .post_pages a,
-.story span.post-page-numbers
+.story span.post-page-numbers,
+.wp-block-tag-cloud a
 	background-color: $blue
 	color: #fff
 	border-radius: 30px
 	height: 40px
 	font-weight: 900
-	font-size: 16px
+	font-size: 16px !important
 	line-height: 40px
 	padding: 0 25px
 	display: inline-block
 	transition: all 300ms ease-in-out
 	margin-right: 10px
+	margin-bottom: 10px
 .story .tagsphar a:hover,
 .story .post_pages a:hover,
-.story span.post-page-numbers:hover
+.story span.post-page-numbers:hover,
+.wp-block-tag-cloud a:hover
 	background-color: $pink-dark
 	color: #FFF
 	transition: all 300ms ease-in-out
@@ -570,6 +675,17 @@ hr
 	img
 		max-width: 100%
 		height: auto
+	.gallery
+		dl.gallery-item
+			border: none
+			dt
+				width: 100%
+				display: block
+				margin: 0 0 20px 0
+				min-width: unset
+			dd
+				margin: 0
+				width: 100%
 .page-template
 	.comments
 		margin-top: 60px
@@ -725,8 +841,11 @@ blockquote
 	color: $blue-dark
 	font-weight: 700
 	margin-left: 30px
-	margin-right: 100px
-	&.wp-block-quote
+	&.has-text-align-right
+		text-align: right
+		p
+			text-align: right
+	&.wp-block-quote, &.wp-block-pullquote
 		p
 			margin-bottom: 0
 	cite
@@ -745,6 +864,10 @@ blockquote
 		position: absolute
 		top: 0
 		left: 0
+
+p.has-drop-cap
+	display: inline-block
+
 ul
 	.sub-menu
 		margin-left: 10px
@@ -817,3 +940,24 @@ section
 		font-size: 80px
 	p.attachment
 		text-align: center
+
+select
+	font-size: 18px
+	color: #7d7d7d
+	border: 2px dashed $pink-light
+	box-sizing: border-box
+	background: transparent
+	min-height: 28px
+	line-height: 28px
+	font-size: 18px
+	font-weight: 700
+	border-radius: 30px
+	-moz-appearance: none
+	-webkit-appearance: none
+	appearance: none
+	background-image: url('../svg/select.svg')
+	background-repeat: no-repeat
+	background-position-y: center
+	background-position-x: 90%
+	max-width: 100%
+	padding: 10px 20px
