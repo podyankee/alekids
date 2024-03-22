@@ -24,6 +24,22 @@ jQuery(function ($) {
 		});
 	}
 
+	//alekids title animation
+
+	if ($('.alekids_title').length) {
+		console.log($('.alekids_title'));
+		$('.alekids_title').appear(
+			function () {
+				$(this)
+					.find('h2')
+					.each(function () {
+						$(this).addClass('animated');
+					});
+			},
+			{ accX: 0, accY: -100 },
+		);
+	}
+
 	//Scroll to top
 
 	if ($('.alekids_scroll_top').length) {

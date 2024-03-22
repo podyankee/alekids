@@ -1,4 +1,142 @@
 @import "normalize.css";
+@-webkit-keyframes figureone {
+  0% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  50% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  100% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+}
+@keyframes figureone {
+  0% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  50% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  100% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+}
+@-webkit-keyframes figuretwo {
+  0% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  50% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  100% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+@keyframes figuretwo {
+  0% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  50% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  100% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+@-webkit-keyframes circleone {
+  0% {
+    -webkit-transform: rotate(0deg) translateX(45px) rotate(0deg);
+            transform: rotate(0deg) translateX(45px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translateX(45px) rotate(-360deg);
+            transform: rotate(360deg) translateX(45px) rotate(-360deg);
+  }
+}
+@keyframes circleone {
+  0% {
+    -webkit-transform: rotate(0deg) translateX(45px) rotate(0deg);
+            transform: rotate(0deg) translateX(45px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translateX(45px) rotate(-360deg);
+            transform: rotate(360deg) translateX(45px) rotate(-360deg);
+  }
+}
+@-webkit-keyframes circletwo {
+  0% {
+    -webkit-transform: rotate(0deg) translateX(25px) rotate(0deg);
+            transform: rotate(0deg) translateX(25px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translateX(25px) rotate(-360deg);
+            transform: rotate(360deg) translateX(25px) rotate(-360deg);
+  }
+}
+@keyframes circletwo {
+  0% {
+    -webkit-transform: rotate(0deg) translateX(25px) rotate(0deg);
+            transform: rotate(0deg) translateX(25px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translateX(25px) rotate(-360deg);
+            transform: rotate(360deg) translateX(25px) rotate(-360deg);
+  }
+}
+@-webkit-keyframes circlethree {
+  0% {
+    -webkit-transform: rotate(0deg) translateX(36px) rotate(0deg);
+            transform: rotate(0deg) translateX(36px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translateX(36px) rotate(-360deg);
+            transform: rotate(360deg) translateX(36px) rotate(-360deg);
+  }
+}
+@keyframes circlethree {
+  0% {
+    -webkit-transform: rotate(0deg) translateX(36px) rotate(0deg);
+            transform: rotate(0deg) translateX(36px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translateX(36px) rotate(-360deg);
+            transform: rotate(360deg) translateX(36px) rotate(-360deg);
+  }
+}
+@-webkit-keyframes lamp {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes lamp {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .col-1,
 .col-2,
 .col-3,
@@ -1309,6 +1447,44 @@ select {
   padding: 10px 20px;
 }
 
+.alekids_title {
+  position: relative;
+  z-index: 0;
+}
+.alekids_title h2 {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 60px;
+  position: relative;
+  display: inline-block;
+}
+.alekids_title h2.custom_color_line_one::before {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+.alekids_title h2.custom_color_line_two::before {
+  -webkit-transition: all 1.4s ease;
+  transition: all 1.4s ease;
+}
+.alekids_title h2.animated::before {
+  margin-top: -25px;
+  opacity: 1;
+}
+.alekids_title h2::before {
+  content: "";
+  width: calc(100% + 20px);
+  height: 20px;
+  border-radius: 20px;
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: -10px;
+  margin-top: 0px;
+  z-index: -1;
+  opacity: 0;
+}
+
 a.alekids_button {
   color: #fff;
 }
@@ -2207,6 +2383,61 @@ nav ul.menu-header > li > a::before {
   color: #b3d0fd;
 }
 
+@keyframes figuretwo {
+  0% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  50% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  100% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+@keyframes circleone {
+  0% {
+    -webkit-transform: rotate(0deg) translateX(45px) rotate(0deg);
+            transform: rotate(0deg) translateX(45px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translateX(45px) rotate(-360deg);
+            transform: rotate(360deg) translateX(45px) rotate(-360deg);
+  }
+}
+@keyframes circletwo {
+  0% {
+    -webkit-transform: rotate(0deg) translateX(25px) rotate(0deg);
+            transform: rotate(0deg) translateX(25px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translateX(25px) rotate(-360deg);
+            transform: rotate(360deg) translateX(25px) rotate(-360deg);
+  }
+}
+@keyframes circlethree {
+  0% {
+    -webkit-transform: rotate(0deg) translateX(36px) rotate(0deg);
+            transform: rotate(0deg) translateX(36px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translateX(36px) rotate(-360deg);
+            transform: rotate(360deg) translateX(36px) rotate(-360deg);
+  }
+}
+@keyframes lamp {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .alekids_top_screen {
   width: 100%;
   height: 776px;
@@ -2282,6 +2513,8 @@ nav ul.menu-header > li > a::before {
   position: absolute;
   right: 55px;
   top: 50px;
+  -webkit-animation: circleone 20s ease infinite;
+          animation: circleone 20s ease infinite;
 }
 
 .alekids_balloon_two {
@@ -2292,6 +2525,20 @@ nav ul.menu-header > li > a::before {
   position: absolute;
   right: 240px;
   top: 240px;
+  -webkit-animation: circletwo 25s ease-in-out infinite;
+          animation: circletwo 25s ease-in-out infinite;
+}
+
+.alekids_balloon_three {
+  background: url(../svg/is-balloon-3.svg) center center no-repeat;
+  width: 34px;
+  height: 61px;
+  display: block;
+  position: absolute;
+  right: 100px;
+  top: 340px;
+  -webkit-animation: circlethree 15s ease-in-out infinite;
+          animation: circlethree 15s ease-in-out infinite;
 }
 
 .alekids_rocket {
@@ -2315,6 +2562,10 @@ nav ul.menu-header > li > a::before {
   margin-left: -126px;
   bottom: 0;
   margin-bottom: -20px;
+  -webkit-animation: lamp 5s ease-in-out infinite;
+          animation: lamp 5s ease-in-out infinite;
+  -webkit-transition: all 1000ms ease-in-out;
+  transition: all 1000ms ease-in-out;
 }
 
 .alekids_figure_one {
@@ -2337,6 +2588,8 @@ nav ul.menu-header > li > a::before {
   margin-left: -580px;
   bottom: 0;
   margin-bottom: -25px;
+  -webkit-animation: figuretwo 7s ease infinite;
+          animation: figuretwo 7s ease infinite;
 }
 
 .alekids_step {
@@ -2454,7 +2707,7 @@ nav ul.menu-header > li > a::before {
 }
 
 .step_link {
-  color: #fff;
+  color: #fff !important;
   font-weight: 900;
   font-size: 20px;
   line-height: 20px;
@@ -2462,6 +2715,7 @@ nav ul.menu-header > li > a::before {
   transition: all 0.3s ease-in-out;
 }
 .step_link:hover {
+  color: #fff;
   opacity: 0.5;
 }
 
@@ -2528,6 +2782,12 @@ nav ul.menu-header > li > a::before {
   position: relative;
   display: inline-block;
 }
+.alekids_title h2.animated::before {
+  -webkit-transition: all 0.9s ease;
+  transition: all 0.9s ease;
+  margin-top: -25px;
+  opacity: 1;
+}
 .alekids_title h2::before {
   content: "";
   width: calc(100% + 20px);
@@ -2537,8 +2797,11 @@ nav ul.menu-header > li > a::before {
   position: absolute;
   top: 100%;
   left: -10px;
-  margin-top: -25px;
+  margin-top: 0px;
   z-index: -1;
+  opacity: 0;
+  -webkit-transition: all 0.9s ease;
+  transition: all 0.9s ease;
 }
 
 .alekids_images_grid {
@@ -2685,6 +2948,8 @@ nav ul.menu-header > li > a::before {
   top: 300px !important;
   right: 30px !important;
   left: unset !important;
+  -webkit-animation: circleone 25s ease infinite;
+          animation: circleone 25s ease infinite;
 }
 .alekids_top_grid::after {
   content: "";
@@ -2696,6 +2961,8 @@ nav ul.menu-header > li > a::before {
   bottom: 0;
   right: 190px;
   background: url("../svg/is-balloon-2.svg") center center no-repeat;
+  -webkit-animation: circletwo 15s ease-in-out infinite;
+          animation: circletwo 15s ease-in-out infinite;
 }
 
 .alekids_contact_box {
@@ -2736,6 +3003,8 @@ nav ul.menu-header > li > a::before {
   top: 0 !important;
   left: 30px !important;
   background: url("../svg/contact-star-1.svg") !important;
+  -webkit-animation: figureone 6s ease infinite;
+          animation: figureone 6s ease infinite;
 }
 .alekids_contact_stars::after {
   width: 63px;
@@ -2745,6 +3014,8 @@ nav ul.menu-header > li > a::before {
   top: 70px;
   left: 130px;
   background: url("../svg/contact-star-2.svg");
+  -webkit-animation: circletwo 10s ease infinite;
+          animation: circletwo 10s ease infinite;
 }
 
 .alekids_contact_icon {
@@ -2882,6 +3153,8 @@ nav ul.menu-header > li > a::before {
   top: -80px !important;
   right: 30px !important;
   left: unset !important;
+  -webkit-animation: figureone 10s ease infinite;
+          animation: figureone 10s ease infinite;
 }
 .alekids_about_balloons::after {
   content: "";
@@ -2893,6 +3166,8 @@ nav ul.menu-header > li > a::before {
   bottom: -60px;
   right: 460px;
   background: url("../svg/about-balloon.svg") center center no-repeat;
+  -webkit-animation: circleone 25s ease infinite;
+          animation: circleone 25s ease infinite;
 }
 
 .alekids_call_box {
@@ -3762,6 +4037,78 @@ footer.site_footer {
   color: #fff;
   background-color: #304566;
   padding-top: 100px;
+  position: relative;
+  overflow: hidden;
+}
+footer.site_footer .alekids_footer_ic1 {
+  background: url("../svg/footer-balloon-1.svg") center center no-repeat;
+  width: 59px;
+  height: 59px;
+  position: absolute;
+  left: 70px;
+  top: 260px;
+  -webkit-animation: circleone 26s ease infinite;
+          animation: circleone 26s ease infinite;
+}
+footer.site_footer .alekids_footer_ic2 {
+  background: url("../svg/footer-balloon-2.svg") center center no-repeat;
+  width: 81px;
+  height: 81px;
+  position: absolute;
+  left: 150px;
+  top: 130px;
+  -webkit-animation: circletwo 7s ease infinite;
+          animation: circletwo 7s ease infinite;
+}
+footer.site_footer .alekids_footer_ic3 {
+  background: url("../svg/footer-balloon-3.svg") center center no-repeat;
+  width: 116px;
+  height: 116px;
+  position: absolute;
+  left: 420px;
+  top: 310px;
+  -webkit-animation: circlethree 17s ease infinite;
+          animation: circlethree 17s ease infinite;
+}
+footer.site_footer .alekids_footer_ic4 {
+  background: url("../svg/footer-balloon-4.svg") center center no-repeat;
+  width: 116px;
+  height: 116px;
+  position: absolute;
+  right: 250px;
+  top: 250px;
+  -webkit-animation: circletwo 26s ease infinite;
+          animation: circletwo 26s ease infinite;
+}
+footer.site_footer .alekids_footer_ic5 {
+  background: url("../svg/footer-balloon-5.svg") center center no-repeat;
+  width: 59px;
+  height: 59px;
+  position: absolute;
+  right: 200px;
+  top: 55px;
+  -webkit-animation: circleone 11s ease infinite;
+          animation: circleone 11s ease infinite;
+}
+footer.site_footer .alekids_footer_ic6 {
+  background: url("../svg/footer-balloon-6.svg") center center no-repeat;
+  width: 81px;
+  height: 81px;
+  position: absolute;
+  right: 80px;
+  top: 190px;
+  -webkit-animation: circlethree 20s ease infinite;
+          animation: circlethree 20s ease infinite;
+}
+footer.site_footer .alekids_footer_ic {
+  background: url("../svg/footer-figure.svg") center center no-repeat;
+  width: 363px;
+  height: 202px;
+  position: absolute;
+  left: 25%;
+  bottom: -100px;
+  -webkit-animation: figuretwo 7s ease infinite;
+          animation: figuretwo 7s ease infinite;
 }
 footer.site_footer .scroll_top_line {
   height: 5px;

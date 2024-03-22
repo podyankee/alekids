@@ -22,6 +22,13 @@
 </div>
 
 <footer class="site_footer">
+	<div class="alekids_footer_ic1"></div>
+	<div class="alekids_footer_ic2"></div>
+	<div class="alekids_footer_ic3"></div>
+	<div class="alekids_footer_ic4"></div>
+	<div class="alekids_footer_ic5"></div>
+	<div class="alekids_footer_ic6"></div>
+	<div class="alekids_footer_ic"></div>
 	<div class="wrapper">
 		<div class="info_box">
 			<a href="<?php echo esc_url(home_url("/")); ?>">

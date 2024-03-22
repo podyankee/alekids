@@ -1,3 +1,37 @@
+@keyframes figuretwo
+	0%
+		transform: rotate(-5deg)
+	50%
+		transform: rotate(5deg)
+	100%
+		transform: rotate(-5deg)
+
+@keyframes circleone
+	0%
+		transform: rotate(0deg) translateX(45px) rotate(0deg)
+	100%
+		transform: rotate(360deg) translateX(45px) rotate(-360deg)
+
+@keyframes circletwo
+	0%
+		transform: rotate(0deg) translateX(25px) rotate(0deg)
+	100%
+		transform: rotate(360deg) translateX(25px) rotate(-360deg)
+
+@keyframes circlethree
+	0%
+		transform: rotate(0deg) translateX(36px) rotate(0deg)
+	100%
+		transform: rotate(360deg) translateX(36px) rotate(-360deg)
+
+@keyframes lamp
+	0%
+		opacity: 1
+	50%
+		opacity: 0.4
+	100%
+		opacity: 1
+
 .alekids_top_screen
 	width: 100%
 	height: 776px
@@ -56,6 +90,7 @@
 	position: absolute
 	right: 55px
 	top: 50px
+	animation: circleone 20s ease infinite
 
 .alekids_balloon_two
 	background: url(../svg/top-screen-balloon-2.svg) center center no-repeat
@@ -65,6 +100,17 @@
 	position: absolute
 	right: 240px
 	top: 240px
+	animation: circletwo 25s ease-in-out infinite
+
+.alekids_balloon_three
+	background: url(../svg/is-balloon-3.svg) center center no-repeat
+	width: 34px
+	height: 61px
+	display: block
+	position: absolute
+	right: 100px
+	top: 340px
+	animation: circlethree 15s ease-in-out infinite
 
 .alekids_rocket
 	background: url(../svg/top-screen-rocket.svg) center center no-repeat
@@ -86,6 +132,8 @@
 	margin-left: -126px
 	bottom: 0
 	margin-bottom: -20px
+	animation: lamp 5s ease-in-out infinite
+	transition: all 1000ms ease-in-out
 
 .alekids_figure_one
 	background: url(../svg/top-screen-figure-1.svg) center center no-repeat
@@ -106,3 +154,4 @@
 	margin-left: -580px
 	bottom: 0
 	margin-bottom: -25px
+	animation: figuretwo 7s ease infinite
