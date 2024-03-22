@@ -37,21 +37,7 @@
 				</nav>
 			</div>
 			<?php } ?>
-			<div class="right_info">
-				<a href="#" class="woo_cart">
-					<div class="ale_cart_icon">
-						<div class="mask"></div>
-						<div class="icon"></div>
-					</div>
-				</a>
-				<a href="#" class="search_opener">
-					<div class="ale_search_icon">
-						<div class="mask"></div>
-						<div class="icon"></div>
-					</div>
-				</a>
-			</div>
+			<?php get_template_part( 'partials/header/alekids_right_info' ); ?>
 		</div>
 	</header>
-	<?php get_template_part( 'partials/header/alekids_search_modal' ); ?>
 	<?php get_template_part( 'partials/header/alekids_heading' ); ?>

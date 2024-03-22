@@ -14,6 +14,48 @@ jQuery(function ($) {
 		}
 	});
 
+	//Display specific animation after preloader end
+
+	$.event.special.destroyed = {
+		remove: function (o) {
+			if (o.handler) {
+				o.handler();
+			}
+		},
+	};
+
+	$('.alekids_preloader_content').bind('destroyed', function () {
+		$('.inner_header h1').each(function () {
+			$(this).addClass('animated');
+		});
+
+		setTimeout(function () {
+			$('.alekids_top_screen .alekids_rocket').each(function () {
+				$(this).addClass('animated').dalay(200).removeClass('animated');
+			});
+		}, 2500);
+		setTimeout(function () {
+			$('.alekids_top_screen .left_content .subtitle').each(function () {
+				$(this).addClass('animated');
+			});
+		}, 500);
+		setTimeout(function () {
+			$('.alekids_top_screen .left_content .top_screen_title').each(function () {
+				$(this).addClass('animated');
+			});
+		}, 1000);
+		setTimeout(function () {
+			$('.alekids_top_screen .left_content .top_screen_description').each(function () {
+				$(this).addClass('animated');
+			});
+		}, 1500);
+		setTimeout(function () {
+			$('.alekids_top_screen .left_content .alekids_button').each(function () {
+				$(this).addClass('animated');
+			});
+		}, 2000);
+	});
+
 	//Preloader
 
 	if ($('.alekids_preloader_content').length) {

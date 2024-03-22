@@ -51,6 +51,12 @@
 		bottom: -1px,
 		left: 0
 		background: url(../svg/screen-mask.svg) center bottom repeat-x
+	.animated
+		animation-name: fadeInUp
+		animation-duration: 1s
+		-webkit-animation-duration: 1s
+		animation-fill-mode: both
+		-webkit-animation-fill-mode: both
 	.left_content
 		width: 55%
 		height: 100%
@@ -69,6 +75,7 @@
 			font-weight: 900
 			font-size: 26px
 			color: #fff
+			opacity: 0
 		.top_screen_title
 			font-style: normal
 			font-weight: 900
@@ -76,11 +83,15 @@
 			line-height: 123px
 			text-transform: uppercase
 			color: $blue-dark
+			opacity: 0
 		.top_screen_description
 			width: 80%
-			margin-bottom: 10px
+			margin-bottom: 20px
+			opacity: 0
 			p:last-child
 				margin-bottom: 0
+		.alekids_button
+			opacity: 0
 
 .alekids_balloon_one
 	background: url(../svg/top-screen-balloon-1.svg) center center no-repeat
@@ -121,6 +132,7 @@
 	left: 50%
 	margin-left: -300px
 	top: 60px
+	opacity: 0
 
 .alekids_lightbulb
 	background: url(../svg/top-screen-lightbulb.svg) center center no-repeat

@@ -1,4 +1,28 @@
 @import "normalize.css";
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
 @-webkit-keyframes figureone {
   0% {
     -webkit-transform: rotate(-20deg);
@@ -2460,6 +2484,14 @@ nav ul.menu-header > li > a::before {
   left: 0;
   background: url(../svg/screen-mask.svg) center bottom repeat-x;
 }
+.alekids_top_screen .animated {
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+}
 .alekids_top_screen .left_content {
   width: 55%;
   height: 100%;
@@ -2488,6 +2520,7 @@ nav ul.menu-header > li > a::before {
   font-weight: 900;
   font-size: 26px;
   color: #fff;
+  opacity: 0;
 }
 .alekids_top_screen .left_content .top_screen_title {
   font-style: normal;
@@ -2496,13 +2529,18 @@ nav ul.menu-header > li > a::before {
   line-height: 123px;
   text-transform: uppercase;
   color: #304566;
+  opacity: 0;
 }
 .alekids_top_screen .left_content .top_screen_description {
   width: 80%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  opacity: 0;
 }
 .alekids_top_screen .left_content .top_screen_description p:last-child {
   margin-bottom: 0;
+}
+.alekids_top_screen .left_content .alekids_button {
+  opacity: 0;
 }
 
 .alekids_balloon_one {
@@ -2550,6 +2588,7 @@ nav ul.menu-header > li > a::before {
   left: 50%;
   margin-left: -300px;
   top: 60px;
+  opacity: 0;
 }
 
 .alekids_lightbulb {
